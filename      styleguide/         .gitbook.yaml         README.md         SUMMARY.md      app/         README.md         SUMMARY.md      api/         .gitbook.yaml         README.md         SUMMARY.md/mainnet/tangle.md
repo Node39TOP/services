@@ -7,11 +7,11 @@ Ubuntu 22 amd64 -x86\
 
 
 {% hint style="success" %}
-Update version 1.0.3
+Update version 1.0.11
 
 ```
 sudo systemctl stop tangle
-wget -O tangle https://github.com/webb-tools/tangle/releases/download/v1.0.3/tangle-default-linux-amd64 && chmod +x tangle
+wget -O tangle https://github.com/webb-tools/tangle/releases/download/v1.0.11/tangle-default-linux-amd64 && chmod +x tangle
 sudo mv tangle /usr/bin/
 tangle --version
 
