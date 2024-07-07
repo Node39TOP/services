@@ -1,30 +1,9 @@
-# 🟢 Tangle
+# ⚙️ Installation
 
-System: 4 core, 8gb ram, 80 disk\
-Ubuntu 22 amd64 -x86\
-
-
-
-
-{% hint style="success" %}
-Update version 1.0.11
-
-```
-sudo systemctl stop tangle
-wget -O tangle https://github.com/webb-tools/tangle/releases/download/v1.0.11/tangle-default-linux-amd64 && chmod +x tangle
-sudo mv tangle /usr/bin/
-tangle --version
-
-systemctl daemon-reload
-systemctl restart tangle && journalctl -u tangle -f -o cat
-```
-{% endhint %}
-
-#### Install Dependencies <a href="#install-dependencies" id="install-dependencies"></a>
+**Install Dependencies:**
 
 ```
 sudo apt update && apt upgrade -y
-
 sudo apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev libgmp3-dev tar clang bsdmainutils ncdu unzip llvm libudev-dev make protobuf-compiler -y
 ```
 
@@ -33,7 +12,7 @@ sudo apt install curl iptables build-essential git wget jq make gcc nano tmux ht
 ```
 cd $HOME
 sudo mkdir -p $HOME/.tangle && cd $HOME/.tangle
-sudo wget -O tangle https://github.com/webb-tools/tangle/releases/download/v1.0.3/tangle-txpool-linux-amd64
+sudo wget -O tangle https://github.com/webb-tools/tangle/releases/download/v1.0.11/tangle-txpool-linux-amd64
 sudo chmod 744 tangle
 sudo mv tangle /usr/bin/
 sudo tangle --version
@@ -113,4 +92,3 @@ sudo systemctl daemon-reload
 sudo systemctl enable tangle
 sudo systemctl restart tangle && sudo journalctl -u tangle -f -o cat
 ```
-
