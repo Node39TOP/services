@@ -96,7 +96,7 @@ WantedBy=multi-user.target
 EOF
 
 sudo systemctl daemon-reload
-sudo systemctl enable cardchaind
+sudo systemctl enable Cardchaind
 ```
 
 **Download snapshort:**

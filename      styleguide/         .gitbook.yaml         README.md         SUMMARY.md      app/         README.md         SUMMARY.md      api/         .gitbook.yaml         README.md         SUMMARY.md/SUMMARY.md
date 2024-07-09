@@ -49,7 +49,6 @@
   * [⚙️ Installation](cosmos/crowd-control/installation.md)
   * [🖥️ Upgrade](cosmos/crowd-control/upgrade.md)
   * [🛟 Command](cosmos/crowd-control/command.md)
-* [Page](cosmos/page.md)
 
 ## 🔴 End
 
