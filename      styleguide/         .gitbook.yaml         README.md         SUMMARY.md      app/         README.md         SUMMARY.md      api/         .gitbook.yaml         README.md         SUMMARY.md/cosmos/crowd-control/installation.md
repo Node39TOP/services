@@ -28,9 +28,9 @@ go version
 
 ```
 cd $HOME
-wget -O Cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.16.0/cardchaind
-chmod +x Cardchaind
-sudo mv Cardchaind /usr/local/bin
+wget -O cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.16.0/cardchaind
+chmod +x cardchaind
+sudo mv cardchaind /usr/local/bin/
 ```
 
 **Set chain and Name Crowd Control:**\
