@@ -44,10 +44,10 @@ Cardchaind init <Change-Name>  --chain-id cardtestnet-11
 
 **Custom Port: (Option)**
 
-```
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:39658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:39657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:39660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:39656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":39666\"%" $HOME/.cardchaind/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:39617\"%; s%^address = \":8080\"%address = \":39680\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:39690\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:39691\"%; s%:8545%:14845%; s%:8546%:14846%; s%:6065%:39665%" $HOME/.cardchaind/config/app.toml
-```
+<pre><code>Cardchaind config node tcp://localhost:39657
+<strong>sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:39658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:39657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:39660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:39656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":39666\"%" $HOME/.cardchaind/config/config.toml
+</strong>sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:39617\"%; s%^address = \":8080\"%address = \":39680\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:39690\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:39691\"%; s%:8545%:14845%; s%:8546%:14846%; s%:6065%:39665%" $HOME/.cardchaind/config/app.toml
+</code></pre>
 
 **Set min gas:**&#x20;
 
