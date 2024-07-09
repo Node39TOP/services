@@ -47,6 +47,7 @@
 * [🟢 Swisstronik](cosmos/swisstronik.md)
 * [🟢 Crowd Control](cosmos/crowd-control/README.md)
   * [⚙️ Installation](cosmos/crowd-control/installation.md)
+  * [🚅 Sync](cosmos/crowd-control/sync.md)
   * [🖥️ Upgrade](cosmos/crowd-control/upgrade.md)
   * [🛟 Command](cosmos/crowd-control/command.md)
 
