@@ -45,7 +45,11 @@
 * [🟢 Viper Private Phase 2](cosmos/viper-private-phase-2/README.md)
   * [🟢 Chain 0003](cosmos/viper-private-phase-2/chain-0003.md)
 * [🟢 Swisstronik](cosmos/swisstronik.md)
-* [🟢 Crowd Control](cosmos/crowd-control.md)
+* [🟢 Crowd Control](cosmos/crowd-control/README.md)
+  * [⚙️ Installation](cosmos/crowd-control/installation.md)
+  * [🖥️ Upgrade](cosmos/crowd-control/upgrade.md)
+  * [🛟 Command](cosmos/crowd-control/command.md)
+* [Page](cosmos/page.md)
 
 ## 🔴 End
 
