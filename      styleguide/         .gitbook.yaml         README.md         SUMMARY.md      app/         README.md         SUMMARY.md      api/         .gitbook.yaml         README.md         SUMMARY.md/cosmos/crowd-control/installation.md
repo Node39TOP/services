@@ -71,7 +71,7 @@ wget -O $HOME/.cardchaind/config/addrbook.json https://node39.top/testnet/crowdc
 **Peers:**
 
 ```
-PEERS=""
+PEERS="86b643ba743ccc78e6e086120d43c96f85872601@202.61.225.157:20056"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.cardchaind/config/config.toml
 ```
 
@@ -94,6 +94,9 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable cardchaind
 ```
 
 **Download snapshort:**
