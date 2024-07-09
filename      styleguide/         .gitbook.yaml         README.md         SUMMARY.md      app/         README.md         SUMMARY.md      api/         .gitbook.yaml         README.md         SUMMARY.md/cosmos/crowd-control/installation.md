@@ -155,7 +155,7 @@ Cardchaind tx staking create-validator \
 --commission-max-change-rate 0.01 \
 --min-self-delegation 1 \
 --pubkey $(Cardchaind tendermint show-validator) \
---moniker "xxxxxxxxxxxx \
+--moniker "xxxxxxxxxxxx" \
 --identity "xxxxxxxxxxxx" \
 --details "xxxxxxxxxxxx" \
 --website "xxxxxxxxxxxx" \
