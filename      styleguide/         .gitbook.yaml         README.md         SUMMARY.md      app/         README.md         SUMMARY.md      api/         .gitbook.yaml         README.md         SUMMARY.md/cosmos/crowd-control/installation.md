@@ -147,19 +147,18 @@ Cardchaind status 2>&1 | jq .SyncInfo.catching_up
 **Create Validator:**
 
 ```
-Cardchaind tx staking create-validator \
---amount 1000000ubpf \
+cardchaind tx staking create-validator \
+--amount 4900000ubpf \
 --from wallet \
 --commission-rate 0.1 \
 --commission-max-rate 0.2 \
 --commission-max-change-rate 0.01 \
 --min-self-delegation 1 \
---pubkey $(Cardchaind tendermint show-validator) \
---moniker "xxxxxxxxxxxx" \
---identity "xxxxxxxxxxxx" \
---details "xxxxxxxxxxxx" \
---website "xxxxxxxxxxxx" \
---security-contact "xxxxxxxxxxxx" \
+--pubkey $(cardchaind tendermint show-validator) \
+--moniker "xxxx" \
+--identity "xxxx" \
+--website "xxxx" \
+--security-contact "xxxx" \
 --details "POS Node&Validator 🚀" \
 --chain-id cardtestnet-11 \
 --gas auto --gas-adjustment 1.5 \
@@ -169,7 +168,7 @@ Cardchaind tx staking create-validator \
 **Edit Validator:**
 
 ```
-Cardchaind tx staking edit-validator \
+ardchaind tx staking edit-validator \
 --new-moniker "xxxxxxxxxxxx" \
 --identity "xxxxxxxxxxxx" \
 --details "xxxxxxxxxxxx" \
