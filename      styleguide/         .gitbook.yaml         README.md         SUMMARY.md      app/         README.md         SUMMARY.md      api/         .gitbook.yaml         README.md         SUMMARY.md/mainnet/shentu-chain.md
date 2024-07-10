@@ -138,17 +138,12 @@ cp $HOME/.shentud/data/priv_validator_state.json $HOME/.shentud/priv_validator_s
 shentud tendermint unsafe-reset-all --home $HOME/.shentud --keep-addr-book
 wget -c https://node39.top/Mainnet/Shentu/snap_shentu.tar.gz -O - | tar -xz -C $HOME/.shentud
 mv $HOME/.shentud/priv_validator_state.json.backup $HOME/.shentud/data/priv_validator_state.json
-sudo systemctl start shentud && sudo journalctl -u shentud -f --no-hostname -o cat
+sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o cat
 ```
 
 **State sync:**
 
 ```
-sed -i "/\[statesync\]/, /^enable =/ s/=.*/= false/;\
-/^rpc_servers =/ s|=.*|= \"\"|;\
-/^trust_height =/ s/=.*/= 0/;\
-/^trust_hash =/ s/=.*/= \"\"/" $HOME/.shentud/config/config.toml						 
-
 sudo systemctl stop shentud 
 SNAP_RPC="https://rpc.shentu-2.2.shentu.aviaone.com:443"
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
@@ -160,7 +155,7 @@ sed -i "/\[statesync\]/, /^enable =/ s/=.*/= true/;\
 /^trust_height =/ s/=.*/= $BLOCK_HEIGHT/;\
 /^trust_hash =/ s/=.*/= \"$TRUST_HASH\"/" $HOME/.shentud/config/config.toml
 
-sudo systemctl stop shentud && shentud tendermint unsafe-reset-all --home $HOME/.shentud --keep-addr-book
+sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o cat
 ```
 
 **Check sync:  (False -> Done)**
