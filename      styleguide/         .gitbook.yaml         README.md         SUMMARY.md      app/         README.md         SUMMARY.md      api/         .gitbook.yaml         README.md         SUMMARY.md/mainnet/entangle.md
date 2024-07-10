@@ -30,7 +30,7 @@ rm -rf entangle-blockchain
 git clone https://github.com/Entangle-Protocol/entangle-blockchain
 cd entangle-blockchain
 make install
-sudo systemctl restart entan
+sudo systemctl restart entangled
 ```
 {% endhint %}
 
@@ -89,7 +89,7 @@ make install
 
 ```
 curl -Ls https://node39.top/Mainnet/Entangle/genesis.json > $HOME/.entangled/config/genesis.json
-curl -Ls https://node39.top/Mainnet/Entangle/genesis.json > $HOME/.entangled/config/addrbook.json
+curl -Ls https://node39.top/Mainnet/Entangle/addrbook.json > $HOME/.entangled/config/addrbook.json
 ```
 
 **Set min gas & Entangled chain:**\
