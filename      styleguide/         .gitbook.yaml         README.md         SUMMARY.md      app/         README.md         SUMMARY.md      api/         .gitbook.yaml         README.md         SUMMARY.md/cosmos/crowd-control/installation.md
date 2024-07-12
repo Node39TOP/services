@@ -71,7 +71,7 @@ wget -O $HOME/.cardchaind/config/addrbook.json https://node39.top/testnet/crowdc
 **Peers:**
 
 ```
-PEERS="86fe149f801ac75213179be5b56fbd1a1e545c43@202.61.225.157:20656"
+PEERS="fd6cf9438cfafe4a1fc35bb20456a856328febaa@37.27.47.29:39656,35c8779026ceb17659b722b6a768e5a7f070c770@84.247.161.158:31656,86fe149f801ac75213179be5b56fbd1a1e545c43@202.61.225.157:20656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.cardchaind/config/config.toml
 ```
 

@@ -24,7 +24,7 @@ sudo systemctl stop Cardchaind
 cp $HOME/.cardchaind/data/priv_validator_state.json $HOME/.cardchaind/priv_validator_state.json.backup
 Cardchaind tendermint unsafe-reset-all --home $HOME/.cardchaind
 
-peers="6284697cfb67571b4dd5b25c8b57dd1215900687@37.27.47.29:39656,86b643ba743ccc78e6e086120d43c96f85872601@202.61.225.157:20056"  
+peers="fd6cf9438cfafe4a1fc35bb20456a856328febaa@37.27.47.29:39656,35c8779026ceb17659b722b6a768e5a7f070c770@84.247.161.158:31656,86fe149f801ac75213179be5b56fbd1a1e545c43@202.61.225.157:20656"  
 SNAP_RPC="https://crowdcontrol-testnet-rpc.node39.top:443"
 
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.cardchaind/config/config.toml 
