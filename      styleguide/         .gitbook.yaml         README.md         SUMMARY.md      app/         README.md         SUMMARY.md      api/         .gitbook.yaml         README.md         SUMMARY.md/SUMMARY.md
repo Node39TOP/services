@@ -33,6 +33,8 @@
 * [🟢 Autonity](testnet/autonity/README.md)
   * [🟢 Validator](testnet/autonity/validator.md)
   * [🟢 RPC](testnet/autonity/rpc.md)
+* [🟢 Rivalz](testnet/rivalz/README.md)
+  * [⚙️ Installation](testnet/rivalz/installation.md)
 
 ## 👨‍🏫 Cosmos
 
