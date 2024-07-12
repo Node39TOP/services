@@ -38,8 +38,8 @@ _<mark style="color:red;">Change</mark>_ _<mark style="color:red;">\<Change-Name
 
 ```
 Cardchaind config keyring-backend os
-Cardchaind config chain-id cardtestnet-11
-Cardchaind init <Change-Name>  --chain-id cardtestnet-11
+Cardchaind config chain-id cardtestnet-12
+Cardchaind init <Change-Name>  --chain-id cardtestnet-12
 ```
 
 **Custom Port: (Option)**
@@ -71,14 +71,13 @@ wget -O $HOME/.cardchaind/config/addrbook.json https://node39.top/testnet/crowdc
 **Peers:**
 
 ```
-PEERS="6284697cfb67571b4dd5b25c8b57dd1215900687@37.27.47.29:39656,86b643ba743ccc78e6e086120d43c96f85872601@202.61.225.157:20056"
+PEERS="86fe149f801ac75213179be5b56fbd1a1e545c43@202.61.225.157:20656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.cardchaind/config/config.toml
 ```
 
 **Create Service:**
 
-```
-sudo tee /etc/systemd/system/Cardchaind.service > /dev/null <<EOF
+<pre><code>sudo tee /etc/systemd/system/Cardchaind.service > /dev/null &#x3C;&#x3C;EOF
 [Unit]
 Description=Cardchain node
 After=network-online.target
@@ -95,9 +94,9 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 
-sudo systemctl daemon-reload
-sudo systemctl enable Cardchaind
-```
+<strong>sudo systemctl daemon-reload
+</strong>sudo systemctl enable Cardchaind
+</code></pre>
 
 **Download snapshort:**
 
@@ -147,7 +146,7 @@ Cardchaind status 2>&1 | jq .SyncInfo.catching_up
 **Create Validator:**
 
 ```
-cardchaind tx staking create-validator \
+Cardchaind tx staking create-validator \
 --amount 4900000ubpf \
 --from wallet \
 --commission-rate 0.1 \
@@ -160,7 +159,7 @@ cardchaind tx staking create-validator \
 --website "xxxx" \
 --security-contact "xxxx" \
 --details "POS Node&Validator 🚀" \
---chain-id cardtestnet-11 \
+--chain-id cardtestnet-12 \
 --gas auto --gas-adjustment 1.5 \
 -y
 ```
@@ -176,7 +175,7 @@ ardchaind tx staking edit-validator \
 --security-contact "xxxxxxxxxxxx" \
 --details "POS Node&Validator 🚀" \
 --from wallet \
---chain-id cardtestnet-11 \
+--chain-id cardtestnet-12 \
 --gas auto --gas-adjustment 1.5 \
 -y
 ```
