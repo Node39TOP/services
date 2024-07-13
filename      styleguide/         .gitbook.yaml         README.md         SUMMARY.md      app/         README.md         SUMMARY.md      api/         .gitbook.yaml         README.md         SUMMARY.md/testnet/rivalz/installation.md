@@ -40,3 +40,9 @@ rivalz run
 ```
 rivalz update
 ```
+
+**Fix Validated: (Change \<Wallet Address>)**
+
+```
+https://be.rivalz.ai/api-v1/orbit-db/verify-orbit-db/<Wallet Address>
+```
