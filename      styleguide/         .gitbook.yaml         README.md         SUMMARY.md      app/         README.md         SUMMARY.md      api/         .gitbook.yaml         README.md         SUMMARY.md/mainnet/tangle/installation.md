@@ -12,7 +12,7 @@ sudo apt install curl iptables build-essential git wget jq make gcc nano tmux ht
 ```
 cd $HOME
 sudo mkdir -p $HOME/.tangle && cd $HOME/.tangle
-sudo wget -O tangle https://github.com/webb-tools/tangle/releases/download/v1.0.11/tangle-txpool-linux-amd64
+sudo wget -O tangle https://github.com/webb-tools/tangle/releases/download/v1.0.12/tangle-txpool-linux-amd64
 sudo chmod 744 tangle
 sudo mv tangle /usr/bin/
 sudo tangle --version
