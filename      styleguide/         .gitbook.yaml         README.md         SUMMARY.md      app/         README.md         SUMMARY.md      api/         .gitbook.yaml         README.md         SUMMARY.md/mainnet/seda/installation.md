@@ -81,7 +81,8 @@ wget -O $HOME/.sedad/config/addrbook.json https://node39.top/Mainnet/Seda/addrbo
 **Peers:**
 
 ```
-PEERS="c22afdfb425190b1e5ab0677a597eeb517c6c317@140.238.198.159:29656"
+peers="c22afdfb425190b1e5ab0677a597eeb517c6c317@140.238.198.159:29656"
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.sedad/config/config.toml
 ```
 
 **Create Service:**

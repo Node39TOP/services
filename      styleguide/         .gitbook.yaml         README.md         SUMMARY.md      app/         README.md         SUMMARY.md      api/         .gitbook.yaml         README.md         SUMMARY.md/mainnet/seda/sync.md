@@ -1,16 +1,18 @@
 # 🚅 Sync
 
-**Snapshort:**
+**Snapshort: Height 853411**
 
 ```
-loading...
+sudo systemctl stop sedad
+
+cp $HOME/.sedad/data/priv_validator_state.json $HOME/.sedad/priv_validator_state.json.backup
+curl https://node39.top/Mainnet/Seda/sedad_data_853411.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.sedad
+mv $HOME/.sedad/priv_validator_state.json.backup $HOME/.sedad/data/priv_validator_state.json
+
+sudo systemctl restart sedad && sudo journalctl -u sedad -f --no-hostname -o cat
 ```
 
-**State sync:**
-
 ```
-sudo systemctl stop Cardchaind
-
 cp $HOME/.sedad/data/priv_validator_state.json $HOME/.sedad/priv_validator_state.json.backup
 sedad tendermint unsafe-reset-all --home $HOME/.sedad
 
