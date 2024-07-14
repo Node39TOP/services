@@ -1,10 +1,23 @@
 # 🖥️ Upgrade
 
-Chain: cardtestnet-11
+**Chain: seda-1**
+
+**Version: 0.1.1**
+
+**Download binary Seda: (amd-64)**
 
 ```
-cd $HOME
-wget -O cardchaind https://github.com/DecentralCardGame/Cardchain/releases/download/v0.16.0/cardchaind
-chmod +x cardchaind
-sudo mv cardchaind /usr/local/bin/
+wget -O sedad https://github.com/sedaprotocol/seda-chain/releases/download/v0.1.1/sedad-amd64
+chmod +x sedad
+sudo mv sedad /usr/local/bin
+sedad version
+```
+
+**Download binary Seda: (arm-64)**
+
+```
+wget -O sedad https://github.com/sedaprotocol/seda-chain/releases/download/v0.1.1/sedad-arm64
+chmod +x sedad
+sudo mv sedad /usr/local/bin
+sedad version
 ```

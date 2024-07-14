@@ -33,7 +33,7 @@ sudo mv sedad /usr/local/bin
 sedad version
 ```
 
-**Download binary Seda: (ar-64)**
+**Download binary Seda: (arm-64)**
 
 ```
 wget -O sedad https://github.com/sedaprotocol/seda-chain/releases/download/v0.1.1/sedad-arm64
