@@ -22,6 +22,11 @@
   * [Sync](mainnet/nibiru-chain/sync.md)
 * [🟢 SelfChain](mainnet/selfchain.md)
 * [🟢 Entangle](mainnet/entangle.md)
+* [🟢 Seda](mainnet/seda/README.md)
+  * [⚙️ Installation](mainnet/seda/installation.md)
+  * [🚅 Sync](mainnet/seda/sync.md)
+  * [🖥️ Upgrade](mainnet/seda/upgrade.md)
+  * [🛟 Command](mainnet/seda/command.md)
 
 ## 👨‍🏫 Testnet
 
