@@ -21,7 +21,7 @@ Below is an introduction to Node39:
 > \- Twitter: [https://twitter.com/node39\_](https://twitter.com/node39\_)\
 > \- Telegram: [https://t.me/Node39](https://t.me/Node39)\
 > \- Email: node39top@gmail.com \
-> \- Group chat VI: [https://t.me/POSNodeValidator](https://t.me/POSNodeValidator)\
+> \- Group chat VI: [https://t.me/POSNodeValidator](https://t.me/POSNodeValidator)Private group.\
 > \- Channel Telegram: [https://t.me/posvalidator\_channel](https://t.me/posvalidator\_channel)
 
 **Best VPS**\

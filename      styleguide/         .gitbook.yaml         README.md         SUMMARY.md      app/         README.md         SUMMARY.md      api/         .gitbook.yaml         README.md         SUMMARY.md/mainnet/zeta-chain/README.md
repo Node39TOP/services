@@ -6,10 +6,10 @@ description: >-
 
 # 🟢 Zeta Chain
 
-Website: \
-Telegram: \
-Discord: \
-X: \
+Website: [https://www.zetachain.com](https://www.zetachain.com) \
+Telegram: [https://t.me/zetachainofficial](https://t.me/zetachainofficial)\
+Discord: [https://discord.gg/zetachain](https://discord.gg/zetachain)\
+X: [https://twitter.com/zetablockchain](https://twitter.com/zetablockchain)\
 \
 Node39 support:
 
