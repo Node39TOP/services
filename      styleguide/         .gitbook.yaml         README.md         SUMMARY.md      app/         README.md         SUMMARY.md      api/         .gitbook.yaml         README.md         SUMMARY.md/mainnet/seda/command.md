@@ -34,7 +34,11 @@ Validator:
 
 ```
 // Delegate
-sedad tx staking delegate $(sedad keys show wallet --bech val -a) 1290000000000000000000aseda --from wallet --chain-id seda-1 --gas-adjustment 1.4 --gas auto --gas-prices 10000000000aseda -y
+sedad tx staking delegate $(sedad keys show wallet --bech val -a) 1290000000000000000000aseda 
+--from wallet 
+--chain-id seda-1 
+--gas-adjustment 1.4 
+--node https://seda-rpc.node39.top:443 --fees 2000000000000000aseda
 
 // Withdraw rewards and commission
 sedad tx distribution withdraw-rewards $(sedad keys show wallet --bech val -a) \
@@ -42,11 +46,14 @@ sedad tx distribution withdraw-rewards $(sedad keys show wallet --bech val -a) \
 --commission \
 --chain-id=seda-1 \
 --gas-adjustment 1.4 \
---gas auto \
---gas-prices 10000000000aseda
+--node https://seda-rpc.node39.top:443 --fees 2000000000000000aseda
 
 // Unjail
-sedad tx slashing unjail --from wallet --chain-id seda-1 --gas-adjustment 1.4 --gas auto --gas-prices 10000000000aseda -y
+sedad tx slashing unjail \
+--from wallet \
+--chain-id seda-1 \
+--gas-adjustment 1.4 \
+--node https://seda-rpc.node39.top:443 --fees 2000000000000000aseda
 
 // Unbond
 sedad tx staking unbond $(sedad keys show wallet --bech val -a) \
@@ -54,8 +61,16 @@ sedad tx staking unbond $(sedad keys show wallet --bech val -a) \
 --commission \
 --chain-id=seda-1 \
 --gas-adjustment 1.4 \
---gas auto \
---gas-prices 10000000000aseda
+--node https://seda-rpc.node39.top:443 --fees 2000000000000000aseda
+
+// Edit Validator
+sedad tx staking edit-validator \
+--new-moniker="Node39.TOP" \
+--commission-rate=0.05 \
+--from wallet \
+--chain-id seda-1 \
+--gas-adjustment 1.4 \
+--node https://seda-rpc.node39.top:443 --fees 2000000000000000aseda
 ```
 
 Vote:
