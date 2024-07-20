@@ -109,6 +109,7 @@ sudo systemctl enable sedad
 **Download snapshort:**
 
 ```
+Tab Sync
 ```
 
 Wallet:
