@@ -27,6 +27,11 @@
   * [🚅 Sync](mainnet/seda/sync.md)
   * [🖥️ Upgrade](mainnet/seda/upgrade.md)
   * [🛟 Command](mainnet/seda/command.md)
+* [🟢 Zeta Chain](mainnet/zeta-chain/README.md)
+  * [⚙️ Installation](mainnet/zeta-chain/installation.md)
+  * [🚅 Sync](mainnet/zeta-chain/sync.md)
+  * [🖥️ Upgrade](mainnet/zeta-chain/upgrade.md)
+  * [🛟 Command](mainnet/zeta-chain/command.md)
 
 ## 👨‍🏫 Testnet
 
