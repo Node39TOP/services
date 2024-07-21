@@ -69,14 +69,13 @@ curl -Ls https://node39.top/node39.top/Mainnet/Selfchain/addrbook.json > $HOME/.
 ```
 sudo tee /etc/systemd/system/selfchaind.service > /dev/null <<EOF
 [Unit]
-Description=Selfchain node
+Description=selfchaind Daemon
 After=network-online.target
 [Service]
 User=$USER
-WorkingDirectory=$HOME/.selfchain
-ExecStart=$(which selfchain) start --home $HOME/.selfchain --chain-id self-1
+ExecStart=$(which selfchaind) start
 Restart=always
-RestartSec=5
+RestartSec=3
 LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
