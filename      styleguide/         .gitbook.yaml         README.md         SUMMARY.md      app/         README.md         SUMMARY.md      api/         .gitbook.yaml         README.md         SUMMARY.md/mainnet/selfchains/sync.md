@@ -1,6 +1,6 @@
 # 🚅 Sync
 
-**Snapshort:**&#x20;
+**Snapshort: Height 688148 | 58Mb**
 
 ```
 sudo systemctl stop selfchaind
@@ -8,7 +8,7 @@ sudo systemctl stop selfchaind
 mv $HOME/.selfchain/data/priv_validator_state.json $HOME/.selfchain/priv_validator_state.json.backup 
 
 selfchaind tendermint unsafe-reset-all --home $HOME/.selfchain --keep-addr-book 
-curl https://node39.top/Mainnet/ | lz4 -dc - | tar -xf - -C $HOME
+curl https://node39.top/Mainnet/Selfchain/selfchain_data.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME
 
 cp $HOME/.selfchain/priv_validator_state.json.backup $HOME/.selfchain/data/priv_validator_state.json 
 
