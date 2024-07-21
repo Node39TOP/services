@@ -20,7 +20,6 @@
 * [🟢 Nibiru Chain](mainnet/nibiru-chain/README.md)
   * [Database option](mainnet/nibiru-chain/database-option.md)
   * [Sync](mainnet/nibiru-chain/sync.md)
-* [🟢 SelfChain](mainnet/selfchain.md)
 * [🟢 Entangle](mainnet/entangle.md)
 * [🟢 Seda](mainnet/seda/README.md)
   * [⚙️ Installation](mainnet/seda/installation.md)
@@ -32,6 +31,11 @@
   * [🚅 Sync](mainnet/zeta-chain/sync.md)
   * [🖥️ Upgrade](mainnet/zeta-chain/upgrade.md)
   * [🛟 Command](mainnet/zeta-chain/command.md)
+* [🟢 Selfchains](mainnet/selfchains/README.md)
+  * [⚙️ Installation](mainnet/selfchains/installation.md)
+  * [🚅 Sync](mainnet/selfchains/sync.md)
+  * [🖥️ Upgrade](mainnet/selfchains/upgrade.md)
+  * [🛟 Command](mainnet/selfchains/command.md)
 
 ## 👨‍🏫 Testnet
 
