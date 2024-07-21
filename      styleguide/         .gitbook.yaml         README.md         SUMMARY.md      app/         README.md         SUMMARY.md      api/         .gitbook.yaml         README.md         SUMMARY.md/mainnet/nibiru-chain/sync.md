@@ -16,7 +16,7 @@ sudo systemctl restart nibid
 sudo journalctl -u nibid -f --no-hostname -o cat
 ```
 
-**Download snapshort:** Height 8484069 goleveldb | 4Gb
+**Download snapshort:** Height 9147216 goleveldb | 4.8Gb
 
 ```
 sudo systemctl stop nibid
@@ -24,7 +24,7 @@ sudo systemctl stop nibid
 cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup 
 
 nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book 
-curl https://node39.top/Mainnet/Nibiru/snapshort-nibiru-goleveldb-8484069.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
+curl https://node39.top/Mainnet/Nibiru/snapshort-nibiru-goleveldb-9147216.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
 
 cp $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json 
 
