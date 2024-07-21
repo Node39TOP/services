@@ -24,7 +24,7 @@ sudo systemctl stop nibid
 cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup 
 
 nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book 
-curl https://node39.top/Mainnet/Nibiru/snapshort-nibiru-goleveldb-9147216.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
+curl https://node39.top/Mainnet/Nibiru/snapshort-nibiru-goleveldb-9147216.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME
 
 cp $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json 
 
