@@ -38,6 +38,9 @@ wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1
 unzip swisstronikd.zip
 sudo cp bin/libsgx_wrapper_v1.0.3.x86_64.so /usr/lib
 cp bin/v1.0.3_enclave.signed.so .swisstronik-enclave
+rm -rf /usr/local/bin/swisstronikd
+cp bin/swisstronikd /usr/local/bin/
+// Edit systemd to v1.0.3
 ```
 {% endhint %}
 
@@ -136,13 +139,13 @@ go version
 **Download Swisstronik:**
 
 ```
-wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/v1.0.1/swisstronikd.deb.zip 
-unzip swisstronikd.deb.zip  
-dpkg -i swisstronik_1.0.1-updated-binaries_amd64.deb 
-swisstronikd version
-
-mkdir -p /root/.swisstronik-enclave/
-cp /usr/lib/enclave.signed.so /root/.swisstronik-enclave/enclave.signed.so
+wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.3/swisstronikd.zip
+unzip swisstronikd.zip
+sudo cp bin/libsgx_wrapper_v1.0.3.x86_64.so /usr/lib
+mkdir .swisstronik-enclave
+cp bin/v1.0.3_enclave.signed.so .swisstronik-enclave
+rm -rf /usr/local/bin/swisstronikd
+cp bin/swisstronikd /usr/local/bin/
 ```
 
 **Set chain and Name Swisstronik:**\
@@ -167,19 +170,18 @@ wget -O $HOME/.swisstronik/config/addrbook.json https://node39.top/testnet/Swiss
 ```
 sudo tee /etc/systemd/system/swisstronikd.service > /dev/null <<EOF
 [Unit]
-Description=swisstronik node
+Description=Swisstronik
 After=network-online.target
 
 [Service]
-User=$USER
-ExecStart=$(which swisstronikd) start
+User=root
+ExecStart=/usr/local/bin/swisstronikd_v1.0.3 start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
 
 [Install]
 WantedBy=multi-user.target
-EOF
 ```
 
 **State sync:**
