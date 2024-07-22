@@ -33,6 +33,8 @@ Node39 support:
 {% hint style="success" %}
 Update version 1.0.3
 
+Binary & CLI:
+
 ```
 wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.3/swisstronikd.zip
 unzip swisstronikd.zip
@@ -41,6 +43,10 @@ cp bin/v1.0.3_enclave.signed.so .swisstronik-enclave
 rm -rf /usr/local/bin/swisstronikd
 cp bin/swisstronikd /usr/local/bin/
 // Edit systemd to v1.0.3
+
+rm -rf /usr/local/bin/swisstronikcli
+wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.3/swisstronikcli-linux-amd64.zip && unzip swisstronikcli-linux-amd64.zip && mv swisstronikcli-linux-amd64 swisstronikcli && chmod +x swisstronikcli && ./swisstronikcli
+mv swisstronikcli /usr/local/bin/swisstronikcli
 ```
 {% endhint %}
 
@@ -210,10 +216,11 @@ if curl -s --head curl https://testnet-files.itrocket.net/swisstronik/snap_swiss
 fi
 ```
 
-**Download cli:**
+**Download cli v4:**
 
 ```
-wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/v1.0.1/swisstronikcli-linux-amd64 && mv swisstronikcli-linux-amd64 swisstronikcli && chmod +x swisstronikcli && ./swisstronikcli
+rm -rf /usr/local/bin/swisstronikcli
+wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.3/swisstronikcli-linux-amd64.zip && unzip swisstronikcli-linux-amd64.zip && mv swisstronikcli-linux-amd64 swisstronikcli && chmod +x swisstronikcli && ./swisstronikcli
 ```
 
 The command above will output a list of accessible commands and flags:
