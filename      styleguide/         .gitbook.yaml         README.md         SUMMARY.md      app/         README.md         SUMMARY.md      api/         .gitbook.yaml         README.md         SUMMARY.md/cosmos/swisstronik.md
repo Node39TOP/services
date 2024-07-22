@@ -28,6 +28,19 @@ Node39 support:
 * [x] Json-RPC: [https://swisstronik-testnet-json-rpc.node39.top/](https://swisstronik-testnet-json-rpc.node39.top/)
 * [x] Dashboard: [https://dashboard.node39.top/swisstroik-testnet](https://dashboard.node39.top/swisstroik-testnet)
 
+#### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
+
+{% hint style="success" %}
+Update version 1.0.3
+
+```
+wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.3/swisstronikd.zip
+unzip swisstronikd.zip
+sudo cp bin/libsgx_wrapper_v1.0.3.x86_64.so /usr/lib
+cp bin/v1.0.3_enclave.signed.so .swisstronik-enclave
+```
+{% endhint %}
+
 #### Setup SGX: <a href="#install-dependencies" id="install-dependencies"></a>
 
 ```
