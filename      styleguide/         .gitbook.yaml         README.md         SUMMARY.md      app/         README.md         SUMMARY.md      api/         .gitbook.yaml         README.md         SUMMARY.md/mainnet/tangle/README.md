@@ -8,6 +8,8 @@ Website: [https://www.tangle.tools/](https://www.tangle.tools/)
 
 Monitor: [https://app.tangle.tools](https://app.tangle.tools)
 
+* [x] RPC: wss://tangle-rpc.node39.top
+
 Explorer: [https://polkadot.js.org/apps/?rpc=wss://rpc.tangle.tools#/staking/payout](https://polkadot.js.org/apps/?rpc=wss://rpc.tangle.tools#/staking/payout)
 
 Docs: [https://docs.tangle.tools/](https://docs.tangle.tools/)
