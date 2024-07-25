@@ -52,7 +52,11 @@
 ## 👨‍🏫 Cosmos
 
 * [🟢 Hedge Block](cosmos/hedge-block.md)
-* [🟢 Warden Protocol](cosmos/warden-protocol.md)
+* [🟢 Warden Protocol](cosmos/warden-protocol/README.md)
+  * [⚙️ Installation](cosmos/warden-protocol/installation.md)
+  * [🚅 Sync](cosmos/warden-protocol/sync.md)
+  * [🖥️ Upgrade](cosmos/warden-protocol/upgrade.md)
+  * [🛟 Command](cosmos/warden-protocol/command.md)
 * [🟢 Galactica](cosmos/galactica.md)
 * [🟢 Airchains](cosmos/airchains/README.md)
   * [Sync](cosmos/airchains/sync.md)
