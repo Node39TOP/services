@@ -4,13 +4,13 @@
 
 **Edit config:**
 
-```
+```bash
 nano $HOME/pactus/config.toml
 ```
 
 **Find \[http]**
 
-```
+```bash
 // Edit
 
 [http]
@@ -25,7 +25,7 @@ nano $HOME/pactus/config.toml
 
 **Strat node: (Run in tmux)**
 
-```
+```bash
 sudo ./pactus-daemon start
 ```
 
@@ -33,7 +33,7 @@ sudo ./pactus-daemon start
 
 _<mark style="color:red;">Save info Peer ID and Your ID</mark>_
 
-```
+```bash
 http://your_ip_node:8085/node
 ```
 
@@ -41,7 +41,7 @@ http://your_ip_node:8085/node
 
 **Pull requests:** edit bootstrap.json
 
-```
+```bash
 ,
     {
         "name": "yourname",
@@ -59,13 +59,13 @@ http://your_ip_node:8085/node
 
 **Edit Config:**
 
-```
+```bash
 nano $HOME/pactus/config.toml
 ```
 
 **Find \[network] and \[sync]**
 
-```
+```bash
 // Default
 [network]
   network_key = "network_key"
