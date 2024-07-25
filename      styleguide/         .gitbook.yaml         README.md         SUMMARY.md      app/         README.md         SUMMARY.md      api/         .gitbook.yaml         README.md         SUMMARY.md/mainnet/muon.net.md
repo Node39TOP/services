@@ -6,14 +6,14 @@
 
 **Install dependencies**
 
-```
+```bash
 sudo apt-get update && apt-get upgrade -y
 sudo apt-get install ca-certificates curl gnupg -y
 ```
 
 **Install docker**
 
-```
+```bash
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
@@ -33,7 +33,7 @@ sudo rm -rf docker_install
 
 **Install Muon.net**
 
-```
+```bash
 curl -o docker-compose.yml https://raw.githubusercontent.com/muon-protocol/muon-node-js/pion/docker-compose-pull.yml
 docker compose pull
 docker compose up -d
@@ -41,13 +41,13 @@ docker compose up -d
 
 **Waiting for 5 minute**
 
-```
+```bash
 curl http://localhost:8012/status
 ```
 
 _**The result should look like this and means your node is running properly. (It is not added to the network yet.)**_
 
-```
+```bash
 {"address":"0x22E25482F7B27b8765FE93F4ac0Cb79a0e8cB3ef",
 "peerId":"QmVZrfc47AQQoPGjbWAmd1wQv9BtGYpFQ67JnbFmmHxAWN",
 "networkingPort":"9012","node":{"addedToNetwork":false,...}}
@@ -55,13 +55,13 @@ _**The result should look like this and means your node is running properly. (It
 
 **Buy PION**
 
-```
+```bash
 https://thena.fi/swap?inputCurrency=0xb8067235c9b71feec069af151fdf0975dfbdfba5&outputCurrency=BNB
 ```
 
 **Staking PION**
 
-```
+```bash
 https://app.muon.net/pion/getting-started
 ```
 
@@ -71,7 +71,7 @@ https://app.muon.net/pion/getting-started
 
 **Backup & restore**
 
-```
+```bash
 docker exec -it muon-node ./node_modules/.bin/ts-node ./src/cmd/index.ts keys backup > backup.json
 cat backup.json
 ```
