@@ -2,14 +2,14 @@
 
 **Install Dependencies:**
 
-```
+```bash
 sudo apt update && apt upgrade -y
 sudo apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev libgmp3-dev tar clang bsdmainutils ncdu unzip llvm libudev-dev make protobuf-compiler -y
 ```
 
 **Download binary & json:**
 
-```
+```bash
 cd $HOME
 sudo mkdir -p $HOME/.tangle && cd $HOME/.tangle
 sudo wget -O tangle https://github.com/webb-tools/tangle/releases/download/v1.0.12/tangle-txpool-linux-amd64
@@ -23,7 +23,7 @@ sudo chmod 744 ~/.tangle/tangle-standalone.json
 
 **Create Service: (Change moniker)**
 
-```
+```bash
 sudo tee /etc/systemd/system/tangle.service > /dev/null << EOF
 [Unit]
 Description=Tangle Validator Node
@@ -50,7 +50,7 @@ EOF
 
 **Create keys: (change your seeds)**
 
-```
+```bash
 KEY="your seeds"
 
 tangle key insert --base-path $HOME/.tangle/data/ \
@@ -87,7 +87,7 @@ tangle key insert --base-path $HOME/.tangle/data/ \
 
 **Command:**
 
-```
+```bash
 sudo systemctl daemon-reload
 sudo systemctl enable tangle
 sudo systemctl restart tangle && sudo journalctl -u tangle -f -o cat
