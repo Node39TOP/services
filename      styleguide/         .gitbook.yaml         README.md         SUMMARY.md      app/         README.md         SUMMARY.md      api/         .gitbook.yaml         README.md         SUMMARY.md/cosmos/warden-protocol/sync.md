@@ -9,7 +9,7 @@ sudo systemctl stop wardend
 
 rm -rf $HOME/.warden/data
 
-https://node39.top/testnet//snap_warden.tar.lz4
+https://node39.top/testnet/warden/snap_warden.tar.lz4
 
 mv $HOME/.warden/priv_validator_state.json $HOME/.warden/data/priv_validator_state.json
 
