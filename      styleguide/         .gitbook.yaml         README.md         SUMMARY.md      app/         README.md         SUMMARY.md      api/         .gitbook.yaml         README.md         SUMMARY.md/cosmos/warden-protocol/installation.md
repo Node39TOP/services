@@ -89,8 +89,8 @@ sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.warden/config/config.toml
 **Download Genesis & addressbook:**
 
 ```bash
-wget -O $HOME/.cardchaind/config/genesis.json https://node39.top/testnet/crowdcontrol/genesis.json
-wget -O $HOME/.cardchaind/config/addrbook.json https://node39.top/testnet/crowdcontrol/addrbook.json
+wget -O $HOME/.warden/config/genesis.json https://node39.top/testnet/warden/genesis.json
+wget -O $HOME/.warden/config/addrbook.json https://node39.top/testnet/warden/addrbook.json
 ```
 
 **Peers:**
