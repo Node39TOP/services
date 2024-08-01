@@ -1,6 +1,6 @@
 # 🚅 Sync
 
-**Snapshort:** Height 193510&#x20;
+**Snapshort:** Height 193510 | Size 978 Mb
 
 ```bash
 sudo systemctl stop symphonyd
