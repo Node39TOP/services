@@ -69,6 +69,11 @@
   * [🚅 Sync](cosmos/crowd-control/sync.md)
   * [🖥️ Upgrade](cosmos/crowd-control/upgrade.md)
   * [🛟 Command](cosmos/crowd-control/command.md)
+  * [🟢 Symphony](cosmos/crowd-control/symphony/README.md)
+    * [⚙️ Installation](cosmos/crowd-control/symphony/installation.md)
+    * [🚅 Sync](cosmos/crowd-control/symphony/sync.md)
+    * [🖥️ Upgrade](cosmos/crowd-control/symphony/upgrade.md)
+    * [🛟 Command](cosmos/crowd-control/symphony/command.md)
 
 ## 🔴 End
 

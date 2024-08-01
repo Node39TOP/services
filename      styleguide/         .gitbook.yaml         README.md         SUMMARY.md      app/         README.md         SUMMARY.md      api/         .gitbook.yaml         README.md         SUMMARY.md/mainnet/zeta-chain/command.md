@@ -18,7 +18,7 @@ zetacored keys list
 zetacored keys delete wallet
 
 //Check Balance
-zetacored q bank balances $(sedad keys show wallet -a)
+zetacored q bank balances $(zetacored keys show wallet -a)
 
 //Export Key (save to wallet.backup)
 zetacored keys export sedad

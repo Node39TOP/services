@@ -1,9 +1,3 @@
----
-description: >-
-  SEDA is a standard for modular data transport and querying. Any data type, for
-  all networks.
----
-
 # 🟢 Zeta Chain
 
 Website: [https://www.zetachain.com](https://www.zetachain.com) \

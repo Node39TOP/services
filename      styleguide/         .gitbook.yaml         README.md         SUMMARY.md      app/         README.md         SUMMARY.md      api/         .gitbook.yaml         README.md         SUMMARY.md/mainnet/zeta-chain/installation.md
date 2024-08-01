@@ -83,7 +83,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.zetacored/config/config.t
 **Download Genesis & addressbook:**
 
 ```
-wget -O $HOME/.zetacored/config/genesis.json https://node39.top/Mainnet//genesis.json
+wget -O $HOME/.zetacored/config/genesis.json https://node39.top/Mainnet/Zeta/genesis.json
 wget -O $HOME/.zetacored/config/addrbook.json https://node39.top/Mainnet/Zeta/addrbook.json
 ```
 
