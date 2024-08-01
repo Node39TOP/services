@@ -118,7 +118,7 @@ symphonyd tx staking create-validator \
 --moniker "Node39.TOP Guide" \
 --identity "xxxxxxxxx" \
 --details "xxxxxxxxx" \
---website xxxxxxxxx \
+--website "xxxxxxxxx" \
 --security-contact xxxxxxxxx \
 --chain-id symphony-testnet-2 \
 --fees=800note \
@@ -130,7 +130,7 @@ symphonyd tx staking create-validator \
 ```bash
 symphonyd tx staking edit-validator \
 --new-moniker="Node39.TOP Guide" \
---identity=xxxxxxxxx \
+--identity="xxxxxxxxx" \
 --details="xxxxxxxxx" \
 --chain-id=symphony-testnet-2 \
 --commission-rate=0.1 \

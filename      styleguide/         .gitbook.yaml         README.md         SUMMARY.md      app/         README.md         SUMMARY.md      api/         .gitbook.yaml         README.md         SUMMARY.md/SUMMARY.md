@@ -64,16 +64,16 @@
 * [🟢 Viper Private Phase 2](cosmos/viper-private-phase-2/README.md)
   * [🟢 Chain 0003](cosmos/viper-private-phase-2/chain-0003.md)
 * [🟢 Swisstronik](cosmos/swisstronik.md)
+* [🟢 Symphony](cosmos/symphony/README.md)
+  * [⚙️ Installation](cosmos/symphony/installation.md)
+  * [🚅 Sync](cosmos/symphony/sync.md)
+  * [🖥️ Upgrade](cosmos/symphony/upgrade.md)
+  * [🛟 Command](cosmos/symphony/command.md)
 * [🟢 Crowd Control](cosmos/crowd-control/README.md)
   * [⚙️ Installation](cosmos/crowd-control/installation.md)
   * [🚅 Sync](cosmos/crowd-control/sync.md)
   * [🖥️ Upgrade](cosmos/crowd-control/upgrade.md)
   * [🛟 Command](cosmos/crowd-control/command.md)
-  * [🟢 Symphony](cosmos/crowd-control/symphony/README.md)
-    * [⚙️ Installation](cosmos/crowd-control/symphony/installation.md)
-    * [🚅 Sync](cosmos/crowd-control/symphony/sync.md)
-    * [🖥️ Upgrade](cosmos/crowd-control/symphony/upgrade.md)
-    * [🛟 Command](cosmos/crowd-control/symphony/command.md)
 
 ## 🔴 End
 
