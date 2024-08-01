@@ -10,5 +10,5 @@ Node39 support:
 * [x] RPC: [https://symphony-testnet-rpc.node39.top](https://symphony-testnet-rpc.node39.top)
 * [x] API: [https://symphony-testnet-api.node39.top](https://symphony-testnet-api.node39.top)
 * [x] Snapshort:
-* [x] Explorer:
+* [x] Explorer: [https://explorer.node39.top/symphony](https://explorer.node39.top/symphony)
 
