@@ -5,7 +5,7 @@
 ```bash
 sudo systemctl stop wardend
 
- $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json
+mv $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json
 
 wardend tendermint unsafe-reset-all --home $HOME/.warden
 
