@@ -50,7 +50,7 @@ go version
 
 cd $HOME
 rm -rf warden
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.3.0/wardend_Linux_x86_64.zip
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.0/wardend_Linux_x86_64.zip
 unzip wardend_Linux_x86_64.zip && rm -rf wardend_Linux_x86_64.zip
 chmod +x wardend
 sudo mv wardend /usr/local/bin
@@ -60,7 +60,7 @@ wardend version
 
 cd $HOME
 rm -rf warden
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.3.0/wardend_Linux_arm64.zip
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.0/wardend_Linux_arm64.zip
 unzip wardend_Linux_arm64.zip && rm -rf wardend_Linux_arm64.zip
 chmod +x wardend
 sudo mv wardend /usr/local/bin
