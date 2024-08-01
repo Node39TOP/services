@@ -34,22 +34,22 @@ Validator:
 
 ```
 // Delegate
-zetacored tx staking delegate $(zetacored keys show wallet --bech val -a) 1000000azeta --from wallet --chain-id zetachain_7000-1 --gas-prices 20000000000azeta --gas-adjustment 1.5 --gas auto -y 
+zetacored tx staking delegate $(zetacored keys show wallet --bech val -a) 1000000azeta --from wallet --chain-id zetachain_7000-1 --gas-prices 2000000000000000azeta --gas-adjustment 1.5 --gas auto -y 
 
 // Withdraw rewards and commission
-zetacored tx distribution withdraw-rewards $(zetacored keys show wallet --bech val -a) --commission --from wallet --chain-id zetachain_7000-1 --gas-prices 20000000000azeta --gas-adjustment 1.5 --gas auto -y 
+zetacored tx distribution withdraw-rewards $(zetacored keys show wallet --bech val -a) --commission --from wallet --chain-id zetachain_7000-1 --gas-prices 2000000000000000azeta --gas-adjustment 1.5 --gas auto -y 
 
 // Unjail
-zetacored tx slashing unjail --from wallet --chain-id zetachain_7000-1 --gas-adjustment 1.5 --gas auto --gas-prices 20000000000azeta -y
+zetacored tx slashing unjail --from wallet --chain-id zetachain_7000-1 --gas-adjustment 1.5 --gas auto --gas-prices 2000000000000000azeta -y
 
 // Unbond
-zetacored tx staking unbond $(zetacored keys show wallet --bech val -a) 1000000azeta --from wallet --chain-id zetachain_7000-1 --gas-prices 20000000000azeta --gas-adjustment 1.5 --gas auto -y 
+zetacored tx staking unbond $(zetacored keys show wallet --bech val -a) 1000000azeta --from wallet --chain-id zetachain_7000-1 --gas-prices 2000000000000000azeta --gas-adjustment 1.5 --gas auto -y 
 ```
 
 Vote:
 
 ```
-zetacored tx gov vote 1 yes --from wallet --chain-id zetachain_7000-1  --fees 20000000000azeta
+zetacored tx gov vote 1 yes --from wallet --chain-id zetachain_7000-1  --fees 2000000000000000azeta
 ```
 
 System:
