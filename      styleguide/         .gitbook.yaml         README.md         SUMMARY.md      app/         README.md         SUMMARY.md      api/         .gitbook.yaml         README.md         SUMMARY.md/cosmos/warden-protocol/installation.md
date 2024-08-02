@@ -120,7 +120,7 @@ WantedBy=multi-user.target
 EOF
 
 <strong>sudo systemctl daemon-reload
-</strong>sudo systemctl enable 
+</strong>sudo systemctl enable wardend
 </code></pre>
 
 Wallet:

@@ -40,7 +40,7 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.warden/config/config.toml
 
 mv $HOME/.warden/priv_validator_state.json $HOME/.warden/data/priv_validator_state.json
 
-sudo systemctl restart wardend && sudo journalctl -u wardend -f
+sudo systemctl restart wardend && sudo journalctl -u wardend -f --no-hostname -o cat
 ```
 
 

@@ -2,28 +2,47 @@
 
 Chain: buenavista-1
 
-Version: 0.4.0
+Version: 0.3.1
 
 **Download Binary Warden Protocol:**
 
-```bash
-// amd64
+<pre class="language-bash"><code class="lang-bash">// amd64
+sudo systemctl stop wardend
 
 cd $HOME
 rm -rf warden
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.0/wardend_Linux_x86_64.zip
-unzip wardend_Linux_x86_64.zip && rm -rf wardend_Linux_x86_64.zip
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.3.1/wardend_Linux_x86_64.zip
+unzip wardend_Linux_x86_64.zip &#x26;&#x26; rm -rf wardend_Linux_x86_64.zip
 chmod +x wardend
 sudo mv wardend /usr/local/bin
 wardend version
+
+mv $HOME/.warden/priv_validator_state.json.backup $HOME/.warden/data/priv_validator_state.json
+wardend tendermint unsafe-reset-all --home $HOME/.warden
+<strong>
+</strong><strong>PEERS="99483cdfe24546ff1cfa451e2e93accb2b71da27@152.53.16.87:39656,92ba004ac4bcd5afbd46bc494ec906579d1f5c1d@52.30.124.80:26656,ed5781ea586d802b580fdc3515d75026262f4b9d@54.171.21.98:26656"
+</strong>sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.warden/config/config.toml
+
+sudo systemctl restart wardend
+sudo journalctl -u wardend -f --no-hostname -o cat
 
 //arm64
+sudo systemctl stop wardend
 
 cd $HOME
 rm -rf warden
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.0/wardend_Linux_arm64.zip
-unzip wardend_Linux_arm64.zip && rm -rf wardend_Linux_arm64.zip
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.3.1/wardend_Linux_arm64.zip
+unzip wardend_Linux_arm64.zip &#x26;&#x26; rm -rf wardend_Linux_arm64.zip
 chmod +x wardend
 sudo mv wardend /usr/local/bin
 wardend version
-```
+
+mv $HOME/.warden/priv_validator_state.json.backup $HOME/.warden/data/priv_validator_state.json
+wardend tendermint unsafe-reset-all --home $HOME/.warden
+
+PEERS="99483cdfe24546ff1cfa451e2e93accb2b71da27@152.53.16.87:39656,92ba004ac4bcd5afbd46bc494ec906579d1f5c1d@52.30.124.80:26656,ed5781ea586d802b580fdc3515d75026262f4b9d@54.171.21.98:26656"
+sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.warden/config/config.toml
+
+sudo systemctl restart wardend
+<strong>sudo journalctl -u wardend -f --no-hostname -o cat
+</strong></code></pre>
