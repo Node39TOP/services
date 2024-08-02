@@ -9,7 +9,7 @@ mv $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_sta
 
 wardend tendermint unsafe-reset-all --home $HOME/.warden
 
-curl https://node39.top/testnet/warden/snap_warden.tar.lz4| lz4 -dc - | tar -xf - -C $HOME/.warden
+curl https://node39.top/testnet/warden/snap_warden.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
 
 mv $HOME/.warden/priv_validator_state.json $HOME/.warden/data/priv_validator_state.json
 
