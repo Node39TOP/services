@@ -6,21 +6,28 @@
 sudo apt update && sudo apt upgrade -y && sudo apt install tmux git curl -y && sudo apt install make clang pkg-config libssl-dev build-essential -y 
 ```
 
-**Download Pactus v1.2.0: (amd64)**
+**Download Pactus v1.4.0: (amd64)**
 
 ```bash
-cd $HOME && rm -rf node_pactus && wget https://github.com/pactus-project/pactus/releases/download/v1.2.0/pactus-cli_1.2.0_linux_amd64.tar.gz && tar -xzf pactus-cli_1.2.0_linux_amd64.tar.gz && rm -rf pactus-cli_1.2.0_linux_amd64.tar.gz && mv pactus-cli_1.2.0 node_pactus && cd node_pactus
-```
-
-**Download Pactus v1.2.0: (arm64)**
-
-```bash
-cd $HOME && rm -rf node_pactus && wget https://github.com/pactus-project/pactus/releases/download/v1.2.0/pactus-cli_1.2.0_linux_arm64.tar.gz && tar -xzf pactus-cli_1.2.0_linux_arm64.tar.gz && rm -rf pactus-cli_1.2.0_linux_arm64.tar.gz && mv pactus-cli_1.2.0 node_pactus && cd node_pactus
-Setup:
+cd $HOME && rm -rf node_pactus && \
+wget https://github.com/pactus-project/pactus/releases/download/v1.4.0/pactus-cli_1.4.0_linux_amd64.tar.gz && \
+tar -xzf pactus-cli_1.4.0_linux_amd64.tar.gz && \
+rm -rf pactus-cli_1.4.0_linux_amd64.tar.gz && \
+mv pactus-cli_1.4.0 node_pactus && cd node_pactusDownload Pactus v1.4.0: (arm64)
 ```
 
 ```bash
-sudo ./pactus-daemon init
+cd $HOME && rm -rf node_pactus && \
+wget https://github.com/pactus-project/pactus/releases/download/v1.4.0/pactus-cli_1.4.0_linux_arm64.tar.gz && \
+tar -xzf pactus-cli_1.4.0_linux_arm64.tar.gz && \
+rm -rf pactus-cli_1.4.0_linux_arm64.tar.gz && \
+mv pactus-cli_1.4.0 node_pactus && cd node_pactussudo
+```
+
+**Setup:**&#x20;
+
+```
+./pactus-daemon init
 ```
 
 \*Note: It is recommended to run <mark style="color:red;">**1-7**</mark> validator.\
