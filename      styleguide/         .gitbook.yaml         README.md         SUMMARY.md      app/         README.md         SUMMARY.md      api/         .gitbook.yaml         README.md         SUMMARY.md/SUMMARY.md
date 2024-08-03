@@ -51,6 +51,11 @@
 
 ## 👨‍🏫 Cosmos
 
+* [🟢 Empeiria](cosmos/empeiria/README.md)
+  * [⚙️ Installation](cosmos/empeiria/installation.md)
+  * [🚅 Sync](cosmos/empeiria/sync.md)
+  * [🖥️ Upgrade](cosmos/empeiria/upgrade.md)
+  * [🛟 Command](cosmos/empeiria/command.md)
 * [🟢 Hedge Block](cosmos/hedge-block.md)
 * [🟢 Warden Protocol](cosmos/warden-protocol/README.md)
   * [⚙️ Installation](cosmos/warden-protocol/installation.md)
