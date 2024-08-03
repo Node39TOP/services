@@ -20,9 +20,7 @@ wardend version
 PEERS="92ba004ac4bcd5afbd46bc494ec906579d1f5c1d@52.30.124.80:26656,ed5781ea586d802b580fdc3515d75026262f4b9d@54.171.21.98:26656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.warden/config/config.toml
 
-rm -f $HOME/.warden/config/genesis.json
-curl -L https://buenavista-genesis.s3.eu-west-1.amazonaws.com/genesis.json.tar.xz | tar xJf -
-mv genesis.json $HOME/.warden/config/genesis.json
+wget -O $HOME/.warden/config/genesis.json https://node39.top/testnet/warden/genesis.json
 
 sudo systemctl restart wardend
 sudo journalctl -u wardend -f --no-hostname -o cat
@@ -41,9 +39,7 @@ wardend version
 PEERS="92ba004ac4bcd5afbd46bc494ec906579d1f5c1d@52.30.124.80:26656,ed5781ea586d802b580fdc3515d75026262f4b9d@54.171.21.98:26656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.warden/config/config.toml
 
-rm -f $HOME/.warden/config/genesis.json
-curl -L https://buenavista-genesis.s3.eu-west-1.amazonaws.com/genesis.json.tar.xz | tar xJf -
-mv genesis.json $HOME/.warden/config/genesis.json
+wget -O $HOME/.warden/config/genesis.json https://node39.top/testnet/warden/genesis.json
 
 sudo systemctl restart wardend
 <strong>sudo journalctl -u wardend -f --no-hostname -o cat
