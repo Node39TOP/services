@@ -50,6 +50,9 @@ emped tx staking unbond $(emped keys show wallet --bech val -a) 100000uempe --fr
 
 // Send Token to another wallet
 emped tx bank send wallet <TO_WALLET_ADDRESS> 100000uempe --from wallet --chain-id empe-testnet-2 --gas-adjustment 1.5 --gas auto --gas-prices 1uempe -y
+
+// Unjail
+emped tx slashing unjail --from wallet --chain-id empe-testnet-2 --gas-adjustment 1.5 --gas auto --gas-prices 1uempe -y
 ```
 
 Vote:
