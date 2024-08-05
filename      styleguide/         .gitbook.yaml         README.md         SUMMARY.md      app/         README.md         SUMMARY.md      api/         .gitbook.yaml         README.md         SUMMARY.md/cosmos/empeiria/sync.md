@@ -1,6 +1,6 @@
 # 🚅 Sync
 
-**Snapshort:**&#x20;
+**Snapshort:** Height 251355&#x20;
 
 ```bash
 sudo systemctl stop emped
@@ -8,7 +8,7 @@ sudo systemctl stop emped
 mv $HOME/.empe-chain/data/priv_validator_state.json $HOME/.empe-chain/priv_validator_state.json.backup 
 
 symphonyd tendermint unsafe-reset-all --home $HOME/.empe-chain --keep-addr-book 
-curl https://node39.top/testnet/empeiria/snapshort-empeiria-193510.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.symphonyd
+curl https://node39.top/testnet/empeiria/symphony_251355.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.symphonyd
 
 mv $HOME/.empe-chain/priv_validator_state.json.backup $HOME/.empe-chain/data/priv_validator_state.json 
 
