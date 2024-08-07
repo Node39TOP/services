@@ -31,22 +31,21 @@ Node39 support:
 #### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
 
 {% hint style="success" %}
-Update version 1.0.3
+Update version 1.0.4
 
-Binary & CLI:
+
 
 ```
-wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.3/swisstronikd.zip
+wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.4/swisstronikd.zip
 unzip swisstronikd.zip
-sudo cp bin/libsgx_wrapper_v1.0.3.x86_64.so /usr/lib
-cp bin/v1.0.3_enclave.signed.so .swisstronik-enclave
-rm -rf /usr/local/bin/swisstronikd
-cp bin/swisstronikd /usr/local/bin/
-// Edit systemd to v1.0.3
+sudo cp $HOME/bin/libsgx_wrapper_v1.0.4.x86_64.so /usr/lib
+cp $HOME/bin/v1.0.4_enclave.signed.so $HOME/.swisstronik-enclave
+chmod +x $HOME/bin/swisstronikd
+sudo mv $HOME/bin/swisstronikd $(which swisstronikd)
 
-rm -rf /usr/local/bin/swisstronikcli
-wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.3/swisstronikcli-linux-amd64.zip && unzip swisstronikcli-linux-amd64.zip && mv swisstronikcli-linux-amd64 swisstronikcli && chmod +x swisstronikcli && ./swisstronikcli
-mv swisstronikcli /usr/local/bin/swisstronikcli
+Next: Edit systemd to v1.0.4 (Option)
+
+sudo systemctl daemon-reload && sudo systemctl restart swisstronikd && journalctl -u swisstronikd -f -o cat
 ```
 {% endhint %}
 
