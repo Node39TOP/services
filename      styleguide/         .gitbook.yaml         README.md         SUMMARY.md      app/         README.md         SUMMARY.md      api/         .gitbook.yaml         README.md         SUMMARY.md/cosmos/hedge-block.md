@@ -140,7 +140,7 @@ sudo systemctl stop hedged
 cp $HOME/.hedge/data/priv_validator_state.json $HOME/.hedge/priv_validator_state.json.backup
 hedged tendermint unsafe-reset-all --home $HOME/.hedge
 rm -rf $HOME/.hedge/data $HOME/.hedge/wasmPath
-curl https://node39.top/testnet/hedge/hedge.tar.lz4  | lz4 -dc - | tar -xf - -C $HOME/.hedge
+curl http://node39.top/testnet/hedge/snapshort-hedge-2762845.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.hedge
 cp $HOME/.hedge/priv_validator_state.json.backup $HOME/.hedge/data/priv_validator_state.json
 sudo systemctl restart hedged && sudo journalctl -u hedged -f
 ```
