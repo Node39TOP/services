@@ -1,6 +1,6 @@
 # Sync
 
-**Download snapshort:** Height 8404313 rocksdb | 20Gb
+**Download snapshort:** Height 10051365 goleveldb | 4.7Gb
 
 ```bash
 sudo systemctl stop nibid
@@ -8,23 +8,7 @@ sudo systemctl stop nibid
 cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup 
 
 nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book 
-curl https://node39.top/Mainnet/Nibiru/snapshort-nibiru-8404313.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
-
-cp $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json 
-
-sudo systemctl restart nibid
-sudo journalctl -u nibid -f --no-hostname -o cat
-```
-
-**Download snapshort:** Height 9320540 goleveldb | 3.6Gb
-
-```bash
-sudo systemctl stop nibid
-
-cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup 
-
-nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book 
-curl https://node39.top/Mainnet/Nibiru/nibiru_data_9320540.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
+curl https://file.node39.top/Mainnet/Nibiru/snapshort-nibid-10051365.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
 
 cp $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json 
 
