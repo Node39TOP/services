@@ -116,7 +116,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable galacticad
 ```
 
-**Snapshort:** Every 4 hours
+**Snapshort:** Height 1858310 | 545MB
 
 ```
 sudo systemctl stop galacticad
@@ -124,7 +124,7 @@ sudo systemctl stop galacticad
 cp $HOME/.galactica/data/priv_validator_state.json $HOME/.galactica/priv_validator_state.json.backup
 
 rm -rf $HOME/.galactica/data $HOME/.galactica/wasmPath
-curl https://node39.top/testnet/galactica/node39-snapshort-galactica.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.galactica
+curl https://file.node39.top/testnet/galactica/snapshort-galactica-1858310.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.galactica
 
 mv $HOME/.galactica/priv_validator_state.json.backup $HOME/.galactica/data/priv_validator_state.json
 
