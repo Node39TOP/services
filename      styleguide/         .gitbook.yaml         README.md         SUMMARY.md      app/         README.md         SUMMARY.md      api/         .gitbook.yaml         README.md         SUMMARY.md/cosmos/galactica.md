@@ -90,8 +90,8 @@ galacticad init <Change-Name> --chain-id=galactica_9302-1
 **Download Genesis & addressbook:**
 
 ```
-curl -Ls https://node39.top/testnet/galaction/genesis.json > $HOME/.galactica/config/genesis.json 
-curl -Ls https://node39.top/testnet/galactica/addrbook.json > $HOME/.galactica/config/addrbook.json
+curl -Ls https://file.node39.top/testnet/galaction/genesis.json > $HOME/.galactica/config/genesis.json 
+curl -Ls https://file.node39.top/testnet/galactica/addrbook.json > $HOME/.galactica/config/addrbook.json
 ```
 
 **Create Service:**
