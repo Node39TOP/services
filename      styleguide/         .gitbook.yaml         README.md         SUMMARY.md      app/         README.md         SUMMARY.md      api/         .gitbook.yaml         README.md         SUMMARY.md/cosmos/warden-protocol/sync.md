@@ -1,18 +1,16 @@
 # 🚅 Sync
 
-**Download snapshort:**
+**Download snapshort:** Height 1683050
 
 ```bash
 sudo systemctl stop wardend
 
-mv $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json
+cp $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json.backup
 
-wardend tendermint unsafe-reset-all --home $HOME/.warden
-rm -fR $HOME/.warden/wasm
+rm -rf $HOME/.warden/data $HOME/.warden/wasm
+curl https://file.node39.top/testnet/warden/snapshot-warden-1683050.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
 
-curl https://buenavista-genesis.s3.eu-west-1.amazonaws.com/warden-snaphot.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
-
-mv $HOME/.warden/priv_validator_state.json $HOME/.warden/data/priv_validator_state.json
+mv $HOME/.warden/priv_validator_state.json.backup $HOME/.warden/data/priv_validator_state.json
 
 sudo systemctl restart wardend && sudo journalctl -u wardend -f --no-hostname -o cat
 ```
