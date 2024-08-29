@@ -60,8 +60,8 @@ selfchaind init <Change-Name> --chain-id=self-1
 **Download Genesis & addressbook:**
 
 ```
-curl -Ls https://node39.top/node39.top/Mainnet/Selfchain/genesis.json > $HOME/.selfchain/config/genesis.json 
-curl -Ls https://node39.top/node39.top/Mainnet/Selfchain/addrbook.json > $HOME/.selfchain/config/addrbook.json
+curl -Ls https://file.node39.top/node39.top/Mainnet/Selfchain/genesis.json > $HOME/.selfchain/config/genesis.json 
+curl -Ls https://file.node39.top/node39.top/Mainnet/Selfchain/addrbook.json > $HOME/.selfchain/config/addrbook.json
 ```
 
 **Create Service:**
