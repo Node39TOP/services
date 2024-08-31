@@ -2,7 +2,7 @@
 
 **Snapshort: Height** 1359320
 
-```
+```bash
 sudo systemctl stop sedad
 
 cp $HOME/.sedad/data/priv_validator_state.json $HOME/.sedad/priv_validator_state.json.backup
@@ -16,7 +16,9 @@ sudo systemctl restart sedad && sudo journalctl -u sedad -f --no-hostname -o cat
 
 **Stale sync:**
 
-```
+```bash
+sudo systemctl stop sedad
+
 cp $HOME/.sedad/data/priv_validator_state.json $HOME/.sedad/priv_validator_state.json.backup
 sedad tendermint unsafe-reset-all --home $HOME/.sedad
 
