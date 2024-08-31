@@ -71,11 +71,11 @@ sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "10000000000aseda"|g' $HOM
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.sedad/config/config.toml
 ```
 
-**Download Genesis & addressbook:**
+**Download Genesis & addressbook:**&#x20;
 
 ```
-wget -O $HOME/.sedad/config/genesis.json https://node39.top/Mainnet/Seda/genesis.json
-wget -O $HOME/.sedad/config/addrbook.json https://node39.top/Mainnet/Seda/addrbook.json
+wget -O $HOME/.sedad/config/genesis.json https://file.node39.top/Mainnet/Seda/genesis.json
+wget -O $HOME/.sedad/config/addrbook.json https://file.node39.top/Mainnet/Seda/addrbook.json
 ```
 
 **Peers:**
