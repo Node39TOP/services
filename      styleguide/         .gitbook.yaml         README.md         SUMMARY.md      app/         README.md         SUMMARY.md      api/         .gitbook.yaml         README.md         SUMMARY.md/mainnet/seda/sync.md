@@ -1,16 +1,20 @@
 # 🚅 Sync
 
-**Snapshort: Height 853411**
+**Snapshort: Height** 1359320
 
 ```
 sudo systemctl stop sedad
 
 cp $HOME/.sedad/data/priv_validator_state.json $HOME/.sedad/priv_validator_state.json.backup
-curl https://node39.top/Mainnet/Seda/sedad_data_853411.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.sedad
+
+sedad tendermint unsafe-reset-all --home $HOME/.sedad --keep-addr-book
+curl https://file.node39.top/Mainnet/Seda/snapshot-seda-1359320.tar.lz4| lz4 -dc - | tar -xf - -C $HOME/.sedad
 mv $HOME/.sedad/priv_validator_state.json.backup $HOME/.sedad/data/priv_validator_state.json
 
 sudo systemctl restart sedad && sudo journalctl -u sedad -f --no-hostname -o cat
 ```
+
+**Stale sync:**
 
 ```
 cp $HOME/.sedad/data/priv_validator_state.json $HOME/.sedad/priv_validator_state.json.backup
