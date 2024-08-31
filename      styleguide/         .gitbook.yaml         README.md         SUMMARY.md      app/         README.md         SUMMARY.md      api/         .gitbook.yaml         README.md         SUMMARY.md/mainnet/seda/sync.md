@@ -38,5 +38,5 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.sedad/config/config.toml
 
 cp $HOME/.sedad/priv_validator_state.json.backup $HOME/.sedad/data/priv_validator_state.json
 
-sudo systemctl restart sedad && sudo journalctl -u sedad -f
+sudo systemctl restart sedad && sudo journalctl -u sedad -f --no-hostname -o cat
 ```
