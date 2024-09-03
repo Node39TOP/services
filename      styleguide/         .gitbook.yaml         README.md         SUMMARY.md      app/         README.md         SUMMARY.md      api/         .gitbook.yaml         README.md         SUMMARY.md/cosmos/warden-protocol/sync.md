@@ -1,6 +1,15 @@
 # 🚅 Sync
 
-**Download snapshort:** Height 1683050
+**Download Genesis & addressbook:**
+
+```bash
+wget -O $HOME/.warden/config/genesis.json https://file.node39.top/testnet/warden/genesis.json
+wget -O $HOME/.warden/config/addrbook.json https://file.node39.top/testnet/warden/addrbook.json
+```
+
+
+
+**Download snapshot:** Height 1975000
 
 ```bash
 sudo systemctl stop wardend
@@ -8,7 +17,7 @@ sudo systemctl stop wardend
 cp $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json.backup
 
 rm -rf $HOME/.warden/data $HOME/.warden/wasm
-curl https://file.node39.top/testnet/warden/snapshot-warden-1683050.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
+curl https://file.node39.top/testnet/warden/snapshot-warden-19750000.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
 
 mv $HOME/.warden/priv_validator_state.json.backup $HOME/.warden/data/priv_validator_state.json
 

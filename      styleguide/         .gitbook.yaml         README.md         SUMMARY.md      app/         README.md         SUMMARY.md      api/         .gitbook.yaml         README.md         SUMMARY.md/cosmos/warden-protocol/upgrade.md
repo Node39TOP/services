@@ -2,45 +2,32 @@
 
 Chain: buenavista-1
 
-Version: 0.3.2
+Version: 0.4.2
 
 **Download Binary Warden Protocol:**
 
-<pre class="language-bash"><code class="lang-bash">// amd64
-sudo systemctl stop wardend
-
+```bash
+// amd64
 cd $HOME
-rm -rf warden
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.3.2/wardend_Linux_x86_64.zip
-unzip wardend_Linux_x86_64.zip &#x26;&#x26; rm -rf wardend_Linux_x86_64.zip
-chmod +x wardend
-sudo mv wardend /usr/local/bin
-wardend version
-
-PEERS="92ba004ac4bcd5afbd46bc494ec906579d1f5c1d@52.30.124.80:26656,ed5781ea586d802b580fdc3515d75026262f4b9d@54.171.21.98:26656"
-sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.warden/config/config.toml
-
-wget -O $HOME/.warden/config/genesis.json https://node39.top/testnet/warden/genesis.json
-
-sudo systemctl restart wardend
-sudo journalctl -u wardend -f --no-hostname -o cat
+rm -rf download
+mkdir download
+cd download
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.2/wardend_Linux_x86_64.zip
+unzip wardend_Linux_x86_64.zip
+rm wardend_Linux_x86_64.zip
+chmod +x $HOME/download/wardend
+sudo mv $HOME/download/wardend $(which wardend)
+sudo systemctl restart wardend && sudo journalctl -u wardend -f
 
 //arm64
-sudo systemctl stop wardend
-
 cd $HOME
-rm -rf warden
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.3.2/wardend_Linux_arm64.zip
-unzip wardend_Linux_arm64.zip &#x26;&#x26; rm -rf wardend_Linux_arm64.zip
-chmod +x wardend
-sudo mv wardend /usr/local/bin
-wardend version
-
-PEERS="92ba004ac4bcd5afbd46bc494ec906579d1f5c1d@52.30.124.80:26656,ed5781ea586d802b580fdc3515d75026262f4b9d@54.171.21.98:26656"
-sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.warden/config/config.toml
-
-wget -O $HOME/.warden/config/genesis.json https://node39.top/testnet/warden/genesis.json
-
-sudo systemctl restart wardend
-<strong>sudo journalctl -u wardend -f --no-hostname -o cat
-</strong></code></pre>
+rm -rf download
+mkdir download
+cd download
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.2/wardend_Linux_x86_64.zip
+unzip wardend_Linux_arm64_64.zip
+rm wardend_Linux_x86_64.zip
+chmod +x $HOME/download/wardend
+sudo mv $HOME/download/wardend $(which wardend)
+sudo systemctl restart wardend && sudo journalctl -u wardend -f
+```

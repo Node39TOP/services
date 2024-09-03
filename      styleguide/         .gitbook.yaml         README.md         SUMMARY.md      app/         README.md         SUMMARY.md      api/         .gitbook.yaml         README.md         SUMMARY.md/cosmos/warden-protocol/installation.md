@@ -46,25 +46,29 @@ go version
 **Download Binary Warden Protocol:**
 
 ```bash
-// AMD64
-
+// amd64
 cd $HOME
-rm -rf warden
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.3.2/wardend_Linux_x86_64.zip
-unzip wardend_Linux_x86_64.zip && rm -rf wardend_Linux_x86_64.zip
-chmod +x wardend
-sudo mv wardend /usr/local/bin
-wardend version
+rm -rf download
+mkdir download
+cd download
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.2/wardend_Linux_x86_64.zip
+unzip wardend_Linux_x86_64.zip
+rm wardend_Linux_x86_64.zip
+chmod +x $HOME/download/wardend
+sudo mv $HOME/download/wardend $(which wardend)
+sudo systemctl restart wardend && sudo journalctl -u wardend -f
 
-// ARM64
-
+//arm64
 cd $HOME
-rm -rf warden
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.3.2/wardend_Linux_arm64.zip
-unzip wardend_Linux_arm64.zip && rm -rf wardend_Linux_arm64.zip
-chmod +x wardend
-sudo mv wardend /usr/local/bin
-wardend version
+rm -rf download
+mkdir download
+cd download
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.2/wardend_Linux_x86_64.zip
+unzip wardend_Linux_arm64_64.zip
+rm wardend_Linux_x86_64.zip
+chmod +x $HOME/download/wardend
+sudo mv $HOME/download/wardend $(which wardend)
+sudo systemctl restart wardend && sudo journalctl -u wardend -f
 ```
 
 **Set chain:**\
@@ -89,8 +93,8 @@ sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.warden/config/config.toml
 **Download Genesis & addressbook:**
 
 ```bash
-wget -O $HOME/.warden/config/genesis.json https://node39.top/testnet/warden/genesis.json
-wget -O $HOME/.warden/config/addrbook.json https://node39.top/testnet/warden/addrbook.json
+wget -O $HOME/.warden/config/genesis.json https://file.node39.top/testnet/warden/genesis.json
+wget -O $HOME/.warden/config/addrbook.json https://file.node39.top/testnet/warden/addrbook.json
 ```
 
 **Peers:**
