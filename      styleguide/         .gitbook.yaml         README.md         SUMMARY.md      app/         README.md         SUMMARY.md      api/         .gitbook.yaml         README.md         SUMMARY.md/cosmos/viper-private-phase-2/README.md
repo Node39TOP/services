@@ -1,27 +1,20 @@
 # 🟢 Viper Private Phase 2
 
-Update version PT-0.1.6
+Update version PT-0.1.7
 
 ```
-Download Binary:
-// Stop service
-sudo systemctl stop viper.service
-
-// Git 
-cd viper-binaries
-sudo git pull origin main
-
-// amd64 - x86
-cd viper-binaries && sudo cp viper_linux_amd64 /usr/local/bin/viper
+// amd64
+sudo systemctl stop viper.service \
+cd viper-binaries && sudo git pull origin main && sudo cp viper_linux_amd64 /usr/local/bin/viper \
+sudo systemctl start viper.service \
+viper network version
 
 // arm64
-cd viper-binaries && sudo cp viper_linux_arm64 /usr/local/bin/viper
-
-// Start service
-sudo systemctl start viper.service
-
-// Check version
+sudo systemctl stop viper.service \
+cd viper-binaries && sudo git pull origin main && sudo cp viper_linux_arm64 /usr/local/bin/viper \
+sudo systemctl start viper.service \
 viper network version
+
 
 // Check Node & Validator
 curl http://127.0.0.1:26657/status
@@ -37,7 +30,7 @@ Note: Validator address and Node address same
 sudo journalctl -u viper -f -o cat
 ```
 
-**Update data:**
+**Update data: \***
 
 ```
 cd $HOME/.viper && rm -r data && sudo git clone https://github.com/vishruthsk/data.git data && sudo chown -R viper ~/.viper/data
