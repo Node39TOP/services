@@ -31,19 +31,19 @@ Node39 support:
 #### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
 
 {% hint style="success" %}
-Update version 1.0.4
+Update version 1.0.5
 
 
 
 ```
 wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.4/swisstronikd.zip
 unzip swisstronikd.zip
-sudo cp $HOME/bin/libsgx_wrapper_v1.0.4.x86_64.so /usr/lib
-cp $HOME/bin/v1.0.4_enclave.signed.so $HOME/.swisstronik-enclave
+sudo cp $HOME/bin/libsgx_wrapper_v1.0.5.x86_64.so /usr/lib
+cp $HOME/bin/v1.0.5_enclave.signed.so $HOME/.swisstronik-enclave
 chmod +x $HOME/bin/swisstronikd
 sudo mv $HOME/bin/swisstronikd $(which swisstronikd)
 
-Next: Edit systemd to v1.0.4 (Option)
+Next: Edit systemd to v1.0.5 (Option)
 
 sudo systemctl daemon-reload && sudo systemctl restart swisstronikd && journalctl -u swisstronikd -f -o cat
 ```
@@ -180,7 +180,7 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/usr/local/bin/swisstronikd_v1.0.3 start
+ExecStart=/usr/local/bin/swisstronikd_v1.0.5 start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
