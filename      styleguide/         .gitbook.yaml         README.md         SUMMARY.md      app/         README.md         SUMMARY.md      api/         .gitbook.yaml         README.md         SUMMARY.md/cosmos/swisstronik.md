@@ -319,7 +319,10 @@ swisstronikd tx staking create-validator \
 --security-contact "xxxxxxxxxxxx" \
 --details "POS Node&Validator 🚀" \
 --chain-id swisstronik_1291-1 \
---keyring-backend test --gas-prices 300000uswtr \
+--keyring-backend file \
+--gas auto \
+--gas-adjustment 1.5 \
+--gas-prices 800000aswtr \ 
 -y 
 ```
 
@@ -336,8 +339,24 @@ swisstronikd tx staking edit-validator \
 --details "POS Node&Validator 🚀" \
 --from wallet \
 --chain-id swisstronik_1291-1 \
---keyring-backend test --gas-prices 300000uswtr \
+--keyring-backend file \
+--gas auto \
+--gas-adjustment 1.5 \
+--gas-prices 800000aswtr \
 -y 
+```
+
+**Delegate Token to your own validator:**
+
+```
+swisstronikd tx staking delegate $(swisstronikd keys show wallet --bech val -a) 1000000000000000000aswtr --from wallet --chain-id swisstronik_1291-1 --keyring-backend file --gas auto --gas-adjustment 1.5 --gas-prices 800000aswtr  -y
+```
+
+**Withdraw rewards and commission from your validator:**
+
+```
+swisstronikd tx distribution withdraw-rewards $(swisstronikd keys show wallet --bech val -a) --from wallet --commissio
+n --chain-id swisstronik_1291-1 --keyring-backend file --gas auto --gas-adjustment 1.5 --gas-prices 800000aswtr -y
 ```
 
 **Command:**
