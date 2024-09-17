@@ -105,7 +105,7 @@ sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001aNGL\"|" $HOM
 ```
 // Peers:
 peers="19688fc3842bacb3f8be2b45f7e29227a7d42284@152.53.3.213:26656"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.nibid/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.entangled/config/config.toml
 ```
 
 **Pruning (optional):**
@@ -156,7 +156,7 @@ sudo systemctl enable entangled
 ```
 sudo systemctl stop entangled
 
-cp $HOME/.entangled/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup 
+cp $HOME/.entangled/data/priv_validator_state.json $HOME/.entangled/priv_validator_state.json.backup 
 
 entangled tendermint unsafe-reset-all --home $HOME/.entangled --keep-addr-book 
 curl https://node39.top/Mainnet/Entangle/snapshort-entangle.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.entangled
