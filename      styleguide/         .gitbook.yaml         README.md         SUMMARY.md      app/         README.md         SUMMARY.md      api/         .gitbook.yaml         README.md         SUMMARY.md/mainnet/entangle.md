@@ -151,7 +151,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable entangled
 ```
 
-**Download snapshort:**&#x20;
+**Download snapshort:  Height 4408312**
 
 ```
 sudo systemctl stop entangled
@@ -159,7 +159,7 @@ sudo systemctl stop entangled
 cp $HOME/.entangled/data/priv_validator_state.json $HOME/.entangled/priv_validator_state.json.backup 
 
 entangled tendermint unsafe-reset-all --home $HOME/.entangled --keep-addr-book 
-curl https://node39.top/Mainnet/Entangle/snapshort-entangle.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.entangled
+curl https://file.node39.top/Mainnet/Entangle/snapshot-entangle-4408312.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.entangled
 
 mv $HOME/.entangled/priv_validator_state.json.backup $HOME/.entangled/data/priv_validator_state.json 
 
