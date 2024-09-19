@@ -16,7 +16,6 @@
   * [⚙️ Installation](mainnet/tangle/installation.md)
   * [🖥️ Upgrade](mainnet/tangle/upgrade.md)
   * [🛟 Command](mainnet/tangle/command.md)
-* [🟢 Shentu Chain](mainnet/shentu-chain.md)
 * [🟢 Nibiru Chain](mainnet/nibiru-chain/README.md)
   * [Database option](mainnet/nibiru-chain/database-option.md)
   * [Sync](mainnet/nibiru-chain/sync.md)
