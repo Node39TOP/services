@@ -1,19 +1,24 @@
 # 🚅 Sync
 
-**Download snapshort: Height 20355055**
+**Download snapshort:** 03:00 UTC | Daily
 
-```
-sudo systemctl stop shentud 
+<pre class="language-bash"><code class="lang-bash">sudo systemctl stop shentud 
+
 cp $HOME/.shentud/data/priv_validator_state.json $HOME/.shentud/priv_validator_state.json.backup
+
 shentud tendermint unsafe-reset-all --home $HOME/.shentud --keep-addr-book
-wget -c https://file.node39.top/Mainnet/Shentu/snapshot-shentu-20355055.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.shentud
+<strong>
+</strong><strong>SNAP_NAME=$(curl -s https://file.node39.top/Mainnet/Shentu/ | egrep -o 'snapshot-shentu-[0-9]+\.tar\.lz4' | sort -V | tail -n 1)
+</strong>wget -c https://file.node39.top/Mainnet/Shentu/${SNAP_NAME} -O - | lz4 -dc - | tar -xf - -C $HOME/.shentud
+
 mv $HOME/.shentud/priv_validator_state.json.backup $HOME/.shentud/data/priv_validator_state.json
-sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o cat
-```
+
+sudo systemctl restart shentud &#x26;&#x26; sudo journalctl -u shentud -f --no-hostname -o cat
+</code></pre>
 
 **State sync:**
 
-```
+```bash
 sudo systemctl stop shentud 
 SNAP_RPC="https://shentu-rpc.node39.top:443"
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
