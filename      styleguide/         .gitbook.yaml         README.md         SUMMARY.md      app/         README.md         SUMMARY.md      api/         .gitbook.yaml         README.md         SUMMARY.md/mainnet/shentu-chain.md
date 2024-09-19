@@ -143,7 +143,7 @@ PEERS="1a3ac3e4a89c776c286df0c860313e5b9192354b@3.237.179.245:26656,40d3832c2f64
 sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.shentud/config/config.toml
 ```
 
-**Download snapshort:**&#x20;
+**Download snapshort: Height 20355055**
 
 ```bash
 sudo systemctl stop shentud 
