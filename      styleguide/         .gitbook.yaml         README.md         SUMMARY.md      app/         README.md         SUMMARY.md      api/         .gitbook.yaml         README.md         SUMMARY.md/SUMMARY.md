@@ -36,6 +36,11 @@
   * [🚅 Sync](mainnet/selfchains/sync.md)
   * [🖥️ Upgrade](mainnet/selfchains/upgrade.md)
   * [🛟 Command](mainnet/selfchains/command.md)
+* [🟢 Shentu](mainnet/shentu/README.md)
+  * [⚙️ Installation](mainnet/shentu/installation.md)
+  * [🚅 Sync](mainnet/shentu/sync.md)
+  * [🖥️ Upgrade](mainnet/shentu/upgrade.md)
+  * [🛟 Command](mainnet/shentu/command.md)
 
 ## 👨‍🏫 Testnet
 
