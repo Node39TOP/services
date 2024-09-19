@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # 🟢 Shentu Chain
 
 **Hardware requirements:**&#x20;
@@ -135,7 +149,7 @@ sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_p
 sudo systemctl stop shentud 
 cp $HOME/.shentud/data/priv_validator_state.json $HOME/.shentud/priv_validator_state.json.backup
 shentud tendermint unsafe-reset-all --home $HOME/.shentud --keep-addr-book
-wget -c https://node39.top/Mainnet/Shentu/snap_shentu.tar.gz -O - | tar -xz -C $HOME/.shentud
+wget -c https://file.node39.top/Mainnet/Shentu/snapshot-shentu-20355055.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.shentud
 mv $HOME/.shentud/priv_validator_state.json.backup $HOME/.shentud/data/priv_validator_state.json
 sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o cat
 ```
@@ -144,7 +158,7 @@ sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o
 
 ```bash
 sudo systemctl stop shentud 
-SNAP_RPC="https://rpc.shentu-2.2.shentu.aviaone.com:443"
+SNAP_RPC="https://shentu-rpc.node39.top:443"
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
