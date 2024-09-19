@@ -20,7 +20,7 @@ Below is an introduction to Node39:
 > If you need more information, please contact us through the following contact channels:\
 > \- Twitter: [https://twitter.com/node39\_](https://twitter.com/node39\_)\
 > \- Telegram: [https://t.me/Node39](https://t.me/Node39)\
-> \- Email: node39top@gmail.com \
+> \- Email: contact@node39.top\
 > \- Group chat VI: [https://t.me/POSNodeValidator](https://t.me/POSNodeValidator)Private group.\
 > \- Channel Telegram: [https://t.me/posvalidator\_channel](https://t.me/posvalidator\_channel)
 
