@@ -2,19 +2,19 @@
 
 **Download snapshort: time:** 03:00 UTC | **db:** goleveldb | **pruning**: 100/0/50 | **indexer**: null
 
-<pre class="language-bash"><code class="lang-bash">sudo systemctl stop shentud 
+```bash
+sudo systemctl stop shentud 
 
 cp $HOME/.shentud/data/priv_validator_state.json $HOME/.shentud/priv_validator_state.json.backup
 
 shentud tendermint unsafe-reset-all --home $HOME/.shentud --keep-addr-book
-<strong>
-</strong><strong>SNAP_NAME=$(curl -s https://file.node39.top/Mainnet/Shentu/ | egrep -o 'snapshot-shentu-[0-9]+\.tar\.lz4' | sort -V | tail -n 1)
-</strong>wget -c https://file.node39.top/Mainnet/Shentu/${SNAP_NAME} -O - | lz4 -dc - | tar -xf - -C $HOME/.shentud
+SNAP_NAME=$(curl -s https://file.node39.top/Mainnet/Shentu/ | egrep -o 'snapshot-shentu-[0-9]+\.tar\.lz4' | sort -V | tail -n 1)
+wget -c https://file.node39.top/Mainnet/Shentu/${SNAP_NAME} -O - | lz4 -dc - | tar -xf - -C $HOME/.shentud
 
 mv $HOME/.shentud/priv_validator_state.json.backup $HOME/.shentud/data/priv_validator_state.json
 
-sudo systemctl restart shentud &#x26;&#x26; sudo journalctl -u shentud -f --no-hostname -o cat
-</code></pre>
+sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o cat
+```
 
 **State sync:**
 
