@@ -33,3 +33,9 @@ sed -i "/\[statesync\]/, /^enable =/ s/=.*/= true/;\
 sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o cat
 ```
 
+**Download Genesis & addressbook:**
+
+```
+curl -Ls https://file.node39.top/Mainnet/Shentu/genesis.json > $HOME/.shentud/config/genesis.json 
+curl -Ls https://file.node39.top/Mainnet/Shentu/addrbook.json > $HOME/.shentud/config/addrbook.json
+```
