@@ -1,6 +1,6 @@
 # 🚅 Sync
 
-**Snapshort:** 03:30 UTC | Daily
+**Snapshort:** 03:30 UTC | Daily | **db:** goleveldb | **pruning**: 100/0/50 | **indexer**: null
 
 ```
 sudo systemctl stop selfchaind
