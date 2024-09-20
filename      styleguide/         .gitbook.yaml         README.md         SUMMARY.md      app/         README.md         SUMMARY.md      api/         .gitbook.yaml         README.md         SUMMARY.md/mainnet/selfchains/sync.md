@@ -1,6 +1,6 @@
 # 🚅 Sync
 
-**Snapshort: Height** 1275855 **| 271Mb**
+**Snapshort:** 03:30 UTC | Daily
 
 ```
 sudo systemctl stop selfchaind
@@ -8,7 +8,8 @@ sudo systemctl stop selfchaind
 mv $HOME/.selfchain/data/priv_validator_state.json $HOME/.selfchain/priv_validator_state.json.backup 
 
 selfchaind tendermint unsafe-reset-all --home $HOME/.selfchain --keep-addr-book 
-curl https://file.node39.top/Mainnet/Selfchain/snapshot-selfchain-1275855.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME
+SNAP_NAME=$(curl -s https://file.node39.top/Mainnet/Selfchain/ | egrep -o 'snapshot-selfchain-[0-9]+\.tar\.lz4' | sort -V | tail -n 1)
+wget -c https://file.node39.top/Mainnet/Shentu/${SNAP_NAME} -O - | lz4 -dc - | tar -xf - -C $HOME/.selfchain
 
 cp $HOME/.selfchain/priv_validator_state.json.backup $HOME/.selfchain/data/priv_validator_state.json 
 
