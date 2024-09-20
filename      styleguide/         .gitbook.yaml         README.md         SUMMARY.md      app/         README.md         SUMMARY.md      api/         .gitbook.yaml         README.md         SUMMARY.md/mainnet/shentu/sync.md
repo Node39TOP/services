@@ -1,6 +1,6 @@
 # 🚅 Sync
 
-**Download snapshort:** 03:00 UTC | Daily
+**Download snapshort: time:** 03:00 UTC | **db:** goleveldb | **pruning**: 100/0/50 | **indexer**: null
 
 <pre class="language-bash"><code class="lang-bash">sudo systemctl stop shentud 
 
