@@ -49,7 +49,7 @@ cd $HOME
 rm -rf node
 git clone https://github.com/zeta-chain/node.git
 cd node
-git checkout v18.0.0
+git checkout v19.1.1
 make install
 ```
 
