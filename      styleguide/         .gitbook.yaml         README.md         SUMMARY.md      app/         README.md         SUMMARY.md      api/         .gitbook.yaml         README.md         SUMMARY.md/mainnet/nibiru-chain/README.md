@@ -16,8 +16,8 @@ X: [https://twitter.com/NibiruChain](https://twitter.com/NibiruChain)\
 Node39 support:
 
 * [x] RPC: [https://nibiru-rpc.node39.top](https://nibiru-rpc.node39.top)
-* [x] API: [https://nibiru-rpc.node39.top](https://nibiru-rpc.node39.top)
-* [x] Snapshort: Height 8404313 (rocksdb) | 20Gb
+* [x] API: [https://nibiru-api.node39.top](https://nibiru-api.node39.top)
+* [x] Snapshort: Daily
 * [x] Explorer: [https://explorer.node39.top/Nibiru/staking/](https://explorer.node39.top/Nibiru/staking/nibivaloper19wduz43p20tcmncunes2m0066wy0v9jhsfr2ms)
 * [x] Staking: [https://explorer.node39.top/Nibiru/staking/nibivaloper19wduz43p20tcmncunes2m0066wy0v9jhsfr2ms](https://explorer.node39.top/Nibiru/staking/nibivaloper19wduz43p20tcmncunes2m0066wy0v9jhsfr2ms)
 
@@ -98,8 +98,8 @@ sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025unibi\"|" $HOM
 **Download Genesis & addressbook:**
 
 ```bash
-curl -Ls https://node39.top/Mainnet/Nibiru/genesis.json > $HOME/.nibid/config/genesis.json
-curl -Ls https://node39.top/Mainnet/Nibiru/addrbook.json > $HOME/.nibid/config/addrbook.json
+curl -Ls https://file.node39.top/Mainnet/Nibiru/genesis.json > $HOME/.nibid/config/genesis.json
+curl -Ls https://file.node39.top/Mainnet/Nibiru/addrbook.json > $HOME/.nibid/config/addrbook.json
 ```
 
 **Peers & Seeds:**
@@ -135,11 +135,6 @@ sudo systemctl enable nibid
 ```
 
 
-
-**State sync:**
-
-```
-```
 
 **Check sync:  **<mark style="color:red;">**(False -> Done)**</mark>
 
