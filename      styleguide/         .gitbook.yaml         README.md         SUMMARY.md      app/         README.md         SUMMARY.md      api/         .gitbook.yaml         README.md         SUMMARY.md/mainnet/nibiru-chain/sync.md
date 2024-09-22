@@ -1,4 +1,4 @@
-# Sync
+# 🚅 Sync
 
 **Download Snapshot:** Height 10182074 goleveldb | 4.6Gb
 
