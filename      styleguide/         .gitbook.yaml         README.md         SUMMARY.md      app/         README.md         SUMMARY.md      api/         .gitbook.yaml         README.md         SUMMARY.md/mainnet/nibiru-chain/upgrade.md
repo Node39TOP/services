@@ -3,7 +3,7 @@
 \
 **Update version 1.5.0**
 
-```
+```bash
 cd $HOME
 rm -rf nibiru
 git clone https://github.com/NibiruChain/nibiru.git

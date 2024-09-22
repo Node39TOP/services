@@ -4,7 +4,7 @@
 
 Wallet:
 
-```
+```bash
 // Add New Wallet
 nibid keys add wallet
 
@@ -32,7 +32,7 @@ nibid keys import wallet.backup
 
 Validator:
 
-```
+```bash
 // Delegate
 nibid tx staking delegate $(nibid keys show wallet --bech val -a) 39000000unibi 
 --from wallet 
