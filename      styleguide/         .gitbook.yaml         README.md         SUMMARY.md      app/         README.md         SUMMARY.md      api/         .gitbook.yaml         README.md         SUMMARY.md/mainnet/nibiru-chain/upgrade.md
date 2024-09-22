@@ -1,23 +1,14 @@
 # 🖥️ Upgrade
 
-**Chain: seda-1**
-
-**Version: 0.1.1**
-
-**Download binary Seda: (amd-64)**
+\
+**Update version 1.5.0**
 
 ```
-wget -O sedad https://github.com/sedaprotocol/seda-chain/releases/download/v0.1.1/sedad-amd64
-chmod +x sedad
-sudo mv sedad /usr/local/bin
-sedad version
-```
-
-**Download binary Seda: (arm-64)**
-
-```
-wget -O sedad https://github.com/sedaprotocol/seda-chain/releases/download/v0.1.1/sedad-arm64
-chmod +x sedad
-sudo mv sedad /usr/local/bin
-sedad version
+cd $HOME
+rm -rf nibiru
+git clone https://github.com/NibiruChain/nibiru.git
+cd nibiru
+git checkout v1.5.0
+make install
+sudo systemctl restart nibid && sudo journalctl -u nibid -f --no-hostname -o cat
 ```
