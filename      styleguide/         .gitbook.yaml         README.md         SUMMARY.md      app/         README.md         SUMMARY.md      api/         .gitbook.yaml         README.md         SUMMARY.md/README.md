@@ -21,8 +21,7 @@ Below is an introduction to Node39:
 > \- Twitter: [https://twitter.com/node39\_](https://twitter.com/node39\_)\
 > \- Telegram: [https://t.me/Node39](https://t.me/Node39)\
 > \- Email: contact@node39.top\
-> \- Group chat VI: [https://t.me/POSNodeValidator](https://t.me/POSNodeValidator)Private group.\
-> \- Channel Telegram: [https://t.me/posvalidator\_channel](https://t.me/posvalidator\_channel)
+> \- Channel Telegram: [@Node39Channel](https://t.me/Node39Channel)
 
 **Best VPS**\
 Hetzner: [Register Free €⁠20](https://console.hetzner.cloud/refer?pk\_campaign=referral-invite\&pk\_medium=referral-program\&pk\_source=reflink\&pk\_content=10927ZwZ9C6d)\
