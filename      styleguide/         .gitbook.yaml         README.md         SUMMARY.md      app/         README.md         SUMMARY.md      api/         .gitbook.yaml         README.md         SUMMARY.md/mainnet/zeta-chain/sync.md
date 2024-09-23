@@ -1,6 +1,6 @@
 # 🚅 Sync
 
-**Snapshort: Auto snapshot | Daily**
+**Snapshort:** 03:30 UTC | Daily | **db:** pebbledb | **pruning**: 100/0/50 | **indexer**: null
 
 ```
 sudo systemctl stop zetacored
