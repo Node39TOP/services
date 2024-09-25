@@ -1,20 +1,24 @@
 # 🟢 Viper Private Phase 2
 
-Update version PT-0.1.7
+Update version PT-0.1.8
 
 ```
 // amd64
-sudo systemctl stop viper.service \
-cd viper-binaries && sudo git pull origin main && sudo cp viper_linux_amd64 /usr/local/bin/viper \
-sudo systemctl start viper.service \
+sudo systemctl stop viper
+cd viper-binaries && sudo git pull origin main && sudo cp viper_linux_amd64 /usr/local/bin/viper
+sudo systemctl start viper
 viper network version
 
 // arm64
-sudo systemctl stop viper.service \
-cd viper-binaries && sudo git pull origin main && sudo cp viper_linux_arm64 /usr/local/bin/viper \
-sudo systemctl start viper.service \
+sudo systemctl stop viper
+cd viper-binaries && sudo git pull origin main && sudo cp viper_linux_arm64 /usr/local/bin/viper
+sudo systemctl start viper
 viper network version
 
+// Update RPC ETH Sepolia
+nano $HOME/.viper/config/blockchains.json
+
+Edit chain 0003 -> RPC ETH Sepolia -> https://rpc.sepolia.org
 
 // Check Node & Validator
 curl http://127.0.0.1:26657/status
