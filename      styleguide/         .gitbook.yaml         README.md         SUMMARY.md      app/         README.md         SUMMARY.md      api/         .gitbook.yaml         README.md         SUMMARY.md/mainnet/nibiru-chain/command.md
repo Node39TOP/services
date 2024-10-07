@@ -44,7 +44,7 @@ nibid tx staking delegate $(nibid keys show wallet --bech val -a) 39000000unibi
 -y
 
 // Withdraw rewards and commission
-sedad tx distribution withdraw-rewards $(sedad keys show wallet --bech val -a) \
+nibid tx distribution withdraw-rewards $(nibid keys show wallet --bech val -a) \
 --from wallet \
 --commission \
 --chain-id cataclysm-1 \

@@ -20,6 +20,28 @@ Node39 support:
 * [x] Snapshort: Every 4 hours
 * [x] Dashboard: [https://dashboard.node39.top/galactica-testnet/staking](https://dashboard.node39.top/galactica-testnet/staking)
 
+#### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
+
+{% hint style="info" %}
+Upgraded Version 0.2.4
+
+<pre class="language-bash"><code class="lang-bash"><strong>cd $HOME
+</strong>rm -rf bin
+mkdir bin
+cd $HOME/bin
+wget https://github.com/Galactica-corp/galactica/releases/download/v0.2.4/galacticad_v0.2.4-linux_amd64.zip
+unzip galacticad_v0.2.4-linux_amd64.zip
+chmod +x $HOME/bin/galacticad
+sudo mv $HOME/bin/galacticad $(which galacticad)
+sudo systemctl restart galacticad &#x26;&#x26; sudo journalctl -u galacticad -f
+
+Edit app.toml
+Add in EVM Configuration 
+
+block-executor = "sequential"
+</code></pre>
+{% endhint %}
+
 #### Install Dependencies: <a href="#install-dependencies" id="install-dependencies"></a>
 
 ```

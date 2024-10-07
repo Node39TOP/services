@@ -20,6 +20,10 @@ sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o
 
 ```bash
 sudo systemctl stop shentud 
+
+cp $HOME/.shentud/data/priv_validator_state.json $HOME/.shentud/priv_validator_state.json.backup
+shentud tendermint unsafe-reset-all --home $HOME/.shentud --keep-addr-book
+
 SNAP_RPC="https://shentu-rpc.node39.top:443"
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
@@ -29,6 +33,7 @@ sed -i "/\[statesync\]/, /^enable =/ s/=.*/= true/;\
 /^rpc_servers =/ s|=.*|= \"$SNAP_RPC,$SNAP_RPC\"|;\
 /^trust_height =/ s/=.*/= $BLOCK_HEIGHT/;\
 /^trust_hash =/ s/=.*/= \"$TRUST_HASH\"/" $HOME/.shentud/config/config.toml
+mv $HOME/.shentud/priv_validator_state.json.backup $HOME/.shentud/data/priv_validator_state.json
 
 sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o cat
 ```
