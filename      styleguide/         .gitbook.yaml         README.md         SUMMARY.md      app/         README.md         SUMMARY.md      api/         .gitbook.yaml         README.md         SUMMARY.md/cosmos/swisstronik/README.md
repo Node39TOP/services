@@ -5,7 +5,7 @@ description: >-
   underlying infrastructure provided by the Cosmos SDK
 ---
 
-# 🟢 Copy of Empeiria
+# 🟢 Swisstronik
 
 **Hardware requirements:**
 
