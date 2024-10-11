@@ -31,22 +31,22 @@ Node39 support:
 #### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
 
 {% hint style="success" %}
-Update version 1.0.5
+Update version 1.0.6
 
 
 
-```
-wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.4/swisstronikd.zip
-unzip swisstronikd.zip
-sudo cp $HOME/bin/libsgx_wrapper_v1.0.5.x86_64.so /usr/lib
-cp $HOME/bin/v1.0.5_enclave.signed.so $HOME/.swisstronik-enclave
+<pre><code>ver="v1.0.6"
+<strong>wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-${ver}/swisstronikd.zip
+</strong>unzip swisstronikd.zip
+sudo cp $HOME/bin/libsgx_wrapper_${ver}.x86_64.so /usr/lib
+cp $HOME/bin/${ver}_enclave.signed.so $HOME/.swisstronik-enclave
 chmod +x $HOME/bin/swisstronikd
 sudo mv $HOME/bin/swisstronikd $(which swisstronikd)
 
-Next: Edit systemd to v1.0.5 (Option)
+Next: Edit systemd to v1.0.6 (Option)
 
-sudo systemctl daemon-reload && sudo systemctl restart swisstronikd && journalctl -u swisstronikd -f -o cat
-```
+sudo systemctl daemon-reload &#x26;&#x26; sudo systemctl restart swisstronikd &#x26;&#x26; journalctl -u swisstronikd -f -o cat
+</code></pre>
 {% endhint %}
 
 #### Setup SGX: <a href="#install-dependencies" id="install-dependencies"></a>
@@ -144,13 +144,13 @@ go version
 **Download Swisstronik:**
 
 ```
-wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.3/swisstronikd.zip
+ver="v1.0.6"
+wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-${ver}/swisstronikd.zip
 unzip swisstronikd.zip
-sudo cp bin/libsgx_wrapper_v1.0.3.x86_64.so /usr/lib
-mkdir .swisstronik-enclave
-cp bin/v1.0.3_enclave.signed.so .swisstronik-enclave
-rm -rf /usr/local/bin/swisstronikd
-cp bin/swisstronikd /usr/local/bin/
+sudo cp $HOME/bin/libsgx_wrapper_${ver}.x86_64.so /usr/lib
+cp $HOME/bin/${ver}_enclave.signed.so $HOME/.swisstronik-enclave
+chmod +x $HOME/bin/swisstronikd
+sudo mv $HOME/bin/swisstronikd $(which swisstronikd)
 ```
 
 **Set chain and Name Swisstronik:**\
@@ -180,7 +180,7 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/usr/local/bin/swisstronikd_v1.0.5 start
+ExecStart=/usr/local/bin/swisstronikd_v1.0.6 start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
@@ -215,11 +215,14 @@ if curl -s --head curl https://testnet-files.itrocket.net/swisstronik/snap_swiss
 fi
 ```
 
-**Download cli v4:**
+**Download cli v6:**
 
 ```
-rm -rf /usr/local/bin/swisstronikcli
-wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.3/swisstronikcli-linux-amd64.zip && unzip swisstronikcli-linux-amd64.zip && mv swisstronikcli-linux-amd64 swisstronikcli && chmod +x swisstronikcli && ./swisstronikcli
+rm -rf /usr/local/bin/swisstronikcli \
+wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.6/swisstronikcli-linux-amd64.zip \
+unzip swisstronikcli-linux-amd64.zip && \
+mv swisstronikcli-linux-amd64 swisstronikcli && \
+chmod +x swisstronikcli && ./swisstronikcli
 ```
 
 The command above will output a list of accessible commands and flags:
