@@ -1,96 +1,45 @@
----
-description: >-
-  Swisstronik is a layer 1 solution built on the Cosmos SDK framework. It aims
-  to combine the benefits of the Ethereum Virtual Machine (EVM) with the
-  underlying infrastructure provided by the Cosmos SDK
-hidden: true
----
+# ⚙️ Installation
 
-# 🟢 Swisstronik
+**Setup SGX:**
 
-**Hardware requirements:**&#x20;
-
-* For now, you can use any **Intel CPU** which supports **SGX via SPS** and EPID remote attestation
-* 32GB RAM
-* 500 GB SSD
-* Ubuntu 22
-
-\
-Website: [https://swisstronik.com/](https://swisstronik.com/)\
-Telegram: [https://t.me/swisstronik](https://t.me/swisstronik)\
-Discord: [https://discord.com/invite/73cKRu9BQF](https://discord.com/invite/73cKRu9BQF)\
-X: [https://x.com/swisstronik](https://x.com/swisstronik)\
-\
-Node39 support:
-
-* [x] RPC: [https://swisstronik-testnet-rpc.node39.top/](https://swisstronik-testnet-rpc.node39.top/)
-* [x] API: [https://swisstronik-testnet-rpc.node39.top/](https://swisstronik-testnet-rpc.node39.top/)
-* [x] gRPC: [https://swisstronik-testnet-grpc.node39.top](https://swisstronik-testnet-grpc.node39.top)
-* [x] Json-RPC: [https://swisstronik-testnet-json-rpc.node39.top/](https://swisstronik-testnet-json-rpc.node39.top/)
-* [x] Dashboard: [https://dashboard.node39.top/swisstroik-testnet](https://dashboard.node39.top/swisstroik-testnet)
-
-#### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
-
-{% hint style="success" %}
-Update version 1.0.6
-
-
-
-<pre><code>ver="v1.0.6"
-<strong>wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-${ver}/swisstronikd.zip
-</strong>unzip swisstronikd.zip
-sudo cp $HOME/bin/libsgx_wrapper_${ver}.x86_64.so /usr/lib
-cp $HOME/bin/${ver}_enclave.signed.so $HOME/.swisstronik-enclave
-chmod +x $HOME/bin/swisstronikd
-sudo mv $HOME/bin/swisstronikd $(which swisstronikd)
-
-Next: Edit systemd to v1.0.6 (Option)
-
-sudo systemctl daemon-reload &#x26;&#x26; sudo systemctl restart swisstronikd &#x26;&#x26; journalctl -u swisstronikd -f -o cat
-</code></pre>
-{% endhint %}
-
-#### Setup SGX: <a href="#install-dependencies" id="install-dependencies"></a>
-
-```
+```bash
 wget https://download.01.org/intel-sgx/sgx-linux/2.22/distro/ubuntu22.04-server/sgx_linux_x64_driver_2.11.54c9c4c.bin 
 chmod +x sgx_linux_x64_driver_2.11.54c9c4c.bin
 sudo ./sgx_linux_x64_driver_2.11.54c9c4c.bin
 ```
 
-#### Install Intel AESM service: <a href="#install-dependencies" id="install-dependencies"></a>
+**Install Intel AESM service:**
 
-```
+```bash
 echo "deb https://download.01.org/intel-sgx/sgx_repo/ubuntu $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/intel-sgx.list >/dev/null
 curl -sSL "https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key" | sudo -E apt-key add -
 sudo apt update
 sudo apt install sgx-aesm-service libsgx-aesm-launch-plugin libsgx-aesm-epid-plugin
-
 ```
 
-#### Install all required libraries: <a href="#install-dependencies" id="install-dependencies"></a>
+**Install all required libraries:**
 
-```
+```bash
 echo "deb https://download.01.org/intel-sgx/sgx_repo/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/intel-sgx.list >/dev/null
 curl -sSL "https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key" | sudo -E apt-key add -
 sudo apt update
 sudo apt install libsgx-launch libsgx-urts libsgx-epid libsgx-quote-ex sgx-aesm-service libsgx-aesm-launch-plugin libsgx-aesm-epid-plugin libsgx-quote-ex libsgx-dcap-ql libsnappy1v5
 ```
 
-#### Install RUST: <a href="#install-dependencies" id="install-dependencies"></a>
+**Install RUST:**
 
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 ```
 
-#### Build & Install SGX tool: <a href="#install-dependencies" id="install-dependencies"></a>
+**Build & Install SGX tool:**
 
-```
+```bash
 cargo install sgxs-tools
 ```
 
-```
+```bash
 sudo $(which sgx-detect)
 
 Detecting SGX, this may take a minute...
@@ -120,18 +69,18 @@ You're all set to start running SGX programs!
 
 **Install dependencies:**
 
-```
+```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 ```
 
 **Install GO: (amd64 - x86)**
 
-```
+```bash
 rm -rf $HOME/go
 sudo rm -rf /usr/local/go
 cd $HOME
-curl https://dl.google.com/go/go1.21.8.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
+curl https://dl.google.com/go/go1.22.2.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -142,9 +91,10 @@ source $HOME/.profile
 go version
 ```
 
-**Download Swisstronik:**
+\
+**Download binary Swisstroni:**
 
-```
+```bash
 ver="v1.0.6"
 wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-${ver}/swisstronikd.zip
 unzip swisstronikd.zip
@@ -154,26 +104,63 @@ chmod +x $HOME/bin/swisstronikd
 sudo mv $HOME/bin/swisstronikd $(which swisstronikd)
 ```
 
-**Set chain and Name Swisstronik:**\
+**Set chain and Name Swisstroni::**\
 _<mark style="color:red;">Change</mark>_ _<mark style="color:red;">\<Change-Name></mark>_&#x20;
 
-```
-swisstronikd enclave request-master-key rpc.testnet.swisstronik.com:46789
-swisstronikd init YOUR_MONIKER --chain-id swisstronik_1291-1
+```bash
+swisstronikd enclave request-master-key swisstronik-testnet-rpc.node39.top:443
+swisstronikd init <Change-Name> --chain-id swisstronik_1291-1
 ```
 
-If err request-master-key: [https://swisstronik.gitbook.io/swisstronik-docs/node-setup/upgrade-your-node/swisstronik-v3-testnet](https://swisstronik.gitbook.io/swisstronik-docs/node-setup/upgrade-your-node/swisstronik-v3-testnet)
+**Custom Port: (Option)**
+
+```bash
+swisstronikd config node tcp://localhost:39657
+sed -i -e "s%:1317%:3917%; s%:8080%:39580%; s%:9090%:39590%; s%:9091%:39591%; s%:8545%:3945%; s%:8546%:39546%; s%:6065%:39565%" $HOME/.swisstronikd/config/app.toml
+sed -i -e "s%:26658%:39658%; s%:26657%:39657%; s%:6060%:3960%; s%:26656%:39656%; s%:26660%:39661%" $HOME/.swisstronikd/config/config.toml
+Set min gas: 
+```
+
+```bash
+sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "7uswtr"|g' $HOME/.swisstronik/config/app.toml
+```
+
+**Set Pruning: (Option)**
+
+```bash
+pruning="custom"
+pruning_keep_recent="100"
+pruning_keep_every="0"
+pruning_interval="10"
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.swisstronik/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.swisstronik/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.swisstronik/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.swisstronik/config/app.toml
+```
+
+**Set indexing: (Option)**&#x20;
+
+```bash
+sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.swisstronik/config/config.toml
+```
 
 **Download Genesis & addressbook:**
 
-```
+```bash
 wget -O $HOME/.swisstronik/config/genesis.json https://node39.top/testnet/Swisstronik/genesis.json
 wget -O $HOME/.swisstronik/config/addrbook.json https://node39.top/testnet/Swisstronik/addrbook.json
 ```
 
+**Peers:**
+
+```bash
+peers="1d75c288ecafc177ea0e15133c3f02117059e8cc@185.183.33.133:26656"
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.swisstronik/config/config.toml
+```
+
 **Create Service:**
 
-```
+```bash
 sudo tee /etc/systemd/system/swisstronikd.service > /dev/null <<EOF
 [Unit]
 Description=Swisstronik
@@ -181,44 +168,20 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/usr/local/bin/swisstronikd_v1.0.6 start
+ExecStart=/usr/local/bin/swisstronikd start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
 
 [Install]
 WantedBy=multi-user.target
-```
 
-**State sync:**
-
-```
-sudo systemctl stop swisstronikd
-SNAP_RPC="https://rpc.testnet.swisstronik.com:443"
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height);
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000));
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).$|\1true| ;
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).$|\1"$SNAP_RPC,$SNAP_RPC"| ;
-s|^(trust_height[[:space:]]+=[[:space:]]+).$|\1$BLOCK_HEIGHT| ;
-s|^(trust_hash[[:space:]]+=[[:space:]]+).$|\1"$TRUST_HASH"|" $HOME/.swisstronik/config/config.toml
-swisstronikd tendermint unsafe-reset-all --home $HOME/.swisstronik --keep-addr-book sudo systemctl restart swisstronikd && journalctl -u swisstronikd -f -o cat | grep heightDownload snapshort:
-```
-
-**Download snapshort:**
-
-```
-swisstronikd tendermint unsafe-reset-all --home $HOME/.swisstronik
-if curl -s --head curl https://testnet-files.itrocket.net/swisstronik/snap_swisstronik.tar.lz4 | head -n 1 | grep "200" > /dev/null; then
-  curl https://testnet-files.itrocket.net/swisstronik/snap_swisstronik.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.swisstronik
-    else
-  echo no have snap
-fi
+systemctl daemon-reload && sudo systemctl enable swisstronikd && systemctl restart swisstronikd
 ```
 
 **Download cli v6:**
 
-```
+```bash
 rm -rf /usr/local/bin/swisstronikcli \
 wget https://github.com/SigmaGmbH/swisstronik-chain/releases/download/testnet-v1.0.6/swisstronikcli-linux-amd64.zip \
 unzip swisstronikcli-linux-amd64.zip && \
@@ -260,54 +223,27 @@ Flags:
 Use "swisstronikcli [command] --help" for more information about a command.
 ```
 
-Next
+**Next**
 
-```
+```bash
 mv swisstronikcli /usr/local/bin/swisstronikcli
 ```
 
-```
+```bash
 swisstronikcli config chain-id swisstronik_1291-1
 swisstronikcli config keyring-backend file
 ```
 
-**Wallet:**
-
-```
-// Add New Wallet
-swisstronikcli keys add wallet --keyring-backend file
-
-// Restore executing wallet
-swisstronikcli keys add wallet --keyring-backend file --recover
-
-// List All Wallets
-swisstronikd keys list
-
-// Delete wallet
-swisstronikd keys delete wallet
-
-// Check Balance
-swisstronikd q bank balances $(swisstronikd keys show wallet -a)
-
-// Show validator
-swisstronikd tendermint show-validator
-
-// Show EVM address
-swisstronikd keys unsafe-export-eth-key 
-
-// Backup
-Seed + priv_validator_key.json
-```
-
+\
 **Check sync: (**<mark style="color:red;">**False -> Done**</mark>**)**
 
-```
+```bash
 swisstronikd status 2>&1 | jq .SyncInfo.catching_up
 ```
 
 **Create Validator:**
 
-```
+```bash
 swisstronikd tx staking create-validator \
 --amount 1000000000000uswtr \
 --from wallet \
@@ -332,7 +268,7 @@ swisstronikd tx staking create-validator \
 
 **Edit Validator:**
 
-```
+```bash
 swisstronikd tx staking edit-validator \
 --commission-rate 0.1 \
 --new-moniker "xxxxxxxxxxxx" \
@@ -348,45 +284,4 @@ swisstronikd tx staking edit-validator \
 --gas-adjustment 1.5 \
 --gas-prices 800000aswtr \
 -y 
-```
-
-**Delegate Token to your own validator:**
-
-```
-swisstronikd tx staking delegate $(swisstronikd keys show wallet --bech val -a) 1000000000000000000aswtr --from wallet --chain-id swisstronik_1291-1 --keyring-backend file --gas auto --gas-adjustment 1.5 --gas-prices 800000aswtr  -y
-```
-
-**Withdraw rewards and commission from your validator:**
-
-```
-swisstronikd tx distribution withdraw-rewards $(swisstronikd keys show wallet --bech val -a) --from wallet --commissio
-n --chain-id swisstronik_1291-1 --keyring-backend file --gas auto --gas-adjustment 1.5 --gas-prices 800000aswtr -y
-```
-
-**Command:**
-
-```
-# Reload Service
-sudo systemctl daemon-reload
-
-# Enable Service
-sudo systemctl enable swisstronikd
-
-# Disable Service
-sudo systemctl disable swisstronikd
-
-# Start Service
-sudo systemctl start swisstronikd
-
-# Stop Service
-sudo systemctl stop swisstronikd
-
-# Restart Service
-sudo systemctl restart swisstronikd
-
-# Check Service Status
-sudo systemctl status swisstronikd
-
-# Check Service Logs
-journalctl -u swisstronikd -f -o cat | grep height
 ```
