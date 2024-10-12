@@ -3,5 +3,8 @@
 **Download snapshort: Once a day**
 
 ```bash
-sudo apt-get install unzip && cd $HOME/pactus && rm -rf data && wget https://node39.top/Mainnet/Pactus/pactus-data.zip && unzip pactus-data.zip
+ rm -rf $HOME/pactus/.pactus.lock
+rm -rf $HOME/pactus/data
+cd $HOME/node_pactus
+./pactus-daemon import
 ```
