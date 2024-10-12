@@ -16,8 +16,7 @@ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).$|\1true| ;
 s|^(rpc_servers[[:space:]]+=[[:space:]]+).$|\1"$SNAP_RPC,$SNAP_RPC"| ;
 s|^(trust_height[[:space:]]+=[[:space:]]+).$|\1$BLOCK_HEIGHT| ;
 s|^(trust_hash[[:space:]]+=[[:space:]]+).$|\1"$TRUST_HASH"|" $HOME/.swisstronik/config/config.toml
-<strong>
-</strong>mv $HOME/.swisstronik/priv_validator_state.json.backup $HOME/.swisstronik/data/priv_validator_state.json
+mv $HOME/.swisstronik/priv_validator_state.json.backup $HOME/.swisstronik/data/priv_validator_state.json
 
-<strong>sudo systemctl restart swisstronikd &#x26;&#x26; journalctl -u swisstronikd -f -o cat | grep heightDownload snapshort:
+<strong>sudo systemctl restart swisstronikd &#x26;&#x26; journalctl -u swisstronikd -f -o cat
 </strong></code></pre>
