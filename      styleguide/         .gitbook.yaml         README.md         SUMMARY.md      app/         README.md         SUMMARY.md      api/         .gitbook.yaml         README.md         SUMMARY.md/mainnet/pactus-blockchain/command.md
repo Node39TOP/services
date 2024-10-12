@@ -51,5 +51,5 @@ sudo ./pactus-daemon start
 **Transfer token**
 
 ```bash
-./pactus-wallet tx transfer <reward address> <receiver add
+./pactus-wallet tx transfer <reward address> <receiver address> <AMOUNT>
 ```
