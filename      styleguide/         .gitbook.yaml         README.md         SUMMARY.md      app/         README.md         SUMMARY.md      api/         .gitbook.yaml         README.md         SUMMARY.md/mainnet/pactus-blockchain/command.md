@@ -1,39 +1,9 @@
 # 🛟 Command
 
-**Wallet seed:**
-
-```bash
-./pactus-wallet seed
-```
-
-#### List of Addresses: <a href="#list-of-addresses" id="list-of-addresses"></a>
-
-```bash
-./pactus-wallet address all
-```
-
-**Check Balance:**
-
-```bash
-./pactus-wallet address balance <ADDRESS>
-```
-
-**Bond to the validator**
-
-```bash
-./pactus-wallet tx bond <Reward address> <Validator address> <AMOUNT>
-```
-
-**Send token**
+**Transfer token:**
 
 ```bash
 ./pactus-wallet tx transfer <reward address> <receiver address> <AMOUNT>
-```
-
-**Unbond:**
-
-```bash
-./pactus-wallet tx unbond <validador_address>
 ```
 
 **Start Pactus: Run in tmux**
@@ -66,7 +36,19 @@ sudo ./pactus-daemon start
 ./pactus-wallet tx bond <Reward address> <Validator address> <AMOUNT>
 ```
 
-**Send token**
+**Unbond: (Unbonding 21 days <=> 181440 block)**
+
+```bash
+./pactus-wallet tx unbond <validador_address>
+```
+
+**Withdraw token:**
+
+```
+./pactus-wallet tx withdraw <Validator address> <Reward address> <AMOUNT>
+```
+
+**Transfer token**
 
 ```bash
 ./pactus-wallet tx transfer <reward address> <receiver add
