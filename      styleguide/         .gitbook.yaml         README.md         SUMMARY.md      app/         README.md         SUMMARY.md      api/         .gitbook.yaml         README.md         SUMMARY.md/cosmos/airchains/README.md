@@ -27,6 +27,19 @@ Node39 support:
 * [x] **Snapshort**:&#x20;
 * [x] Explorer: [https://explorer.node39.top/airchains-testnet](https://dashboard.node39.top/airchains-testnet)
 
+#### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
+
+{% hint style="info" %}
+```
+// amd
+cd $HOME
+wget -O junctiond https://github.com/airchains-network/junction/releases/download/v0.2.0/junctiond-linux-amd64
+chmod +x junctiond
+sudo mv $HOME/junctiond /usr/local/bin
+sudo systemctl restart junctiond && sudo journalctl -u junctiond -f
+```
+{% endhint %}
+
 #### Install Dependencies: <a href="#install-dependencies" id="install-dependencies"></a>
 
 ```
