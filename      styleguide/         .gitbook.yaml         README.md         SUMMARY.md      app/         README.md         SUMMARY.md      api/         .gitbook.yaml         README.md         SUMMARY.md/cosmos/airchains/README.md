@@ -36,7 +36,14 @@ cd $HOME
 wget -O junctiond https://github.com/airchains-network/junction/releases/download/v0.2.0/junctiond-linux-amd64
 chmod +x junctiond
 sudo mv $HOME/junctiond /usr/local/bin
-sudo systemctl restart junctiond && sudo journalctl -u junctiond -f
+sudo systemctl restart junctiond && sudo journalctl -u junctiond -f -o cat
+
+// arm
+cd $HOME
+wget -O junctiond https://github.com/airchains-network/junction/releases/download/v0.2.0/junctiond-linux-arm64
+chmod +x junctiond
+sudo mv $HOME/junctiond /usr/local/bin
+sudo systemctl restart junctiond && sudo journalctl -u junctiond -f -o cat
 ```
 {% endhint %}
 
