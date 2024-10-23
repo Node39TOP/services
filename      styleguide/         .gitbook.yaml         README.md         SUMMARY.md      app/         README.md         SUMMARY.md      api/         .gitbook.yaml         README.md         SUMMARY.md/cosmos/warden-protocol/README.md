@@ -23,7 +23,9 @@ Node39 support:
 
 * [x] RPC: [https://warden-testnet-rpc.node39.top](https://warden-testnet-rpc.node39.top)
 * [x] API: [https://warden-testnet-rpc.node39.top](https://warden-testnet-rpc.node39.top)
-* [x] Snapshort: Every 4 hours
-* [x] Dashboard: [https://dashboard.node39.top/warden-testnet/](https://dashboard.node39.top/warden-testnet/)
+* [x] gRPC: [https://warden.testnet.grpc.node39.top](https://warden.testnet.grpc.node39.top)
+* [x] Snapshort: Daily
+* [x] State sync:
+* [x] Dashboard: [https://explorer.node39.top/warden-testnet/](https://explorer.node39.top/warden-testnet/)
 
 #### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
