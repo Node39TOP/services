@@ -7,17 +7,22 @@ wget -O $HOME/.warden/config/genesis.json https://file.node39.top/testnet/warden
 wget -O $HOME/.warden/config/addrbook.json https://file.node39.top/testnet/warden/addrbook.json
 ```
 
+**Download Wasm**:
 
+```bash
+rm -rf $HOME/.warden/data $HOME/.warden/wasm
+curl https://file.node39.top/testnet/warden/wasm-warden.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
+```
 
-**Download snapshot:** Height 1975000
+**Download snapshot:** Height 6915
 
 ```bash
 sudo systemctl stop wardend
 
-cp $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json.backup
+mv $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json.backup
 
 rm -rf $HOME/.warden/data $HOME/.warden/wasm
-curl https://file.node39.top/testnet/warden/snapshot-warden-19750000.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
+curl https://file.node39.top/testnet/warden/snapshot-warden-6915.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
 
 mv $HOME/.warden/priv_validator_state.json.backup $HOME/.warden/data/priv_validator_state.json
 
