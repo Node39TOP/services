@@ -54,26 +54,26 @@ wardend comet show-validator
 
 wardend tx staking create-validator $HOME/validator.json \
 --from=wallet \
---chain-id=buenavista-1 \
+--chain-id=chiado_10010-1 \
 --fees=500uward
 
 // Delegate you Validator (Change token 1ward = 1000000uward)
 
 wardend tx staking delegate $(wardend keys show wallet --bech val -a)  1000000uward \
     --from=wallet \
-    --chain-id=buenavista-1 \
+    --chain-id=chiado_10010-1 \
     --fees=500uward
 // Withdraw rewards and commission from your validator
 
 wardend tx distribution withdraw-rewards $(wardend keys show wallet --bech val -a) \
 --from wallet \
 --commission \
---chain-id=buenavista-1 \
+--chain-id=chiado_10010-1 \
 --fees=500uward
 
 //Unjail
 
-wardend tx slashing unjail --from wallet --chain-id buenavista-1 --fees=500uward -y
+wardend tx slashing unjail --from wallet --chain-id chiado_10010-1 --fees=500uward -y
 
 ```
 
