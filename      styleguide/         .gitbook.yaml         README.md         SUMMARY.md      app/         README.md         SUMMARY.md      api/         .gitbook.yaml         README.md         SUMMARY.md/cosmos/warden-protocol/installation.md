@@ -13,7 +13,7 @@ sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -
 rm -rf $HOME/go
 sudo rm -rf /usr/local/go
 cd $HOME
-curl https://dl.google.com/go/go1.21.8.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
+curl https://dl.google.com/go/go1.23.1.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -30,7 +30,7 @@ go version
 rm -rf $HOME/go
 sudo rm -rf /usr/local/go
 cd $HOME
-curl https://dl.google.com/go/go1.20.6.linux-arm64.tar.gz | sudo tar -C/usr/local -zxvf -
+curl https://dl.google.com/go/go1.23.1.linux-arm64.tar.gz | sudo tar -C/usr/local -zxvf -
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -51,37 +51,37 @@ cd $HOME
 rm -rf download
 mkdir download
 cd download
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.2/wardend_Linux_x86_64.zip
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.5.2/wardend_Linux_x86_64.zip
 unzip wardend_Linux_x86_64.zip
 rm wardend_Linux_x86_64.zip
-chmod +x $HOME/download/wardend
-sudo mv $HOME/download/wardend $(which wardend)
-sudo systemctl restart wardend && sudo journalctl -u wardend -f
+chmod +x ~/wardend
+sudo mv ~/wardend /usr/local/bin
+sudo systemctl restart wardend && sudo journalctl -u wardend -f -o cat
 
 //arm64
 cd $HOME
 rm -rf download
 mkdir download
 cd download
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.4.2/wardend_Linux_x86_64.zip
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.5.2/wardend_Linux_x86_64.zip
 unzip wardend_Linux_arm64_64.zip
 rm wardend_Linux_x86_64.zip
-chmod +x $HOME/download/wardend
-sudo mv $HOME/download/wardend $(which wardend)
-sudo systemctl restart wardend && sudo journalctl -u wardend -f
+chmod +x ~/wardend
+sudo mv ~/wardend /usr/local/bin
+sudo systemctl restart wardend && sudo journalctl -u wardend -f -o cat
 ```
 
 **Set chain:**\
 _<mark style="color:red;">Change</mark>_ _<mark style="color:red;">\<Change-Name></mark>_&#x20;
 
 ```bash
-wardend init <Change-Name> --chain-id buenavista-1
+wardend init <Change-Name> --chain-id chiado_10010-1
 ```
 
 **Set min gas:**&#x20;
 
 ```bash
-sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "0.0025uward"|g' $HOME/.warden/config/app.toml
+sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "250000000000000award"/' app.toml
 ```
 
 **Set indexing: (Option)**&#x20;
