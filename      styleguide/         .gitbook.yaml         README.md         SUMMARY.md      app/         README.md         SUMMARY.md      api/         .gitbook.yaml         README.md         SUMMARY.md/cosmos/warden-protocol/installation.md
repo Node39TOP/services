@@ -75,7 +75,7 @@ wardend init <Change-Name> --chain-id chiado_10010-1
 **Set min gas:**&#x20;
 
 ```bash
-sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "250000000000000award"/' app.toml
+sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "250000000000000award"/' $HOME/.warden/config/app.toml
 ```
 
 **Set indexing: (Option)**&#x20;
