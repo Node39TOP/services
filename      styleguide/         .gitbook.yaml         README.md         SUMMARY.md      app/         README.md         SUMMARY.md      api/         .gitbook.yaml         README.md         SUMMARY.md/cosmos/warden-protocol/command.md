@@ -33,7 +33,7 @@ Seed + priv_validator_key.json
 ```bash
 // Create Validator
 
-wardend comet show-validator
+wardend tendermint show-validator
 
 # EX: pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A7JSLhhRRXl3/Cfyi1kDQXBsp8yA5Z2BOIPQQ6JzXy7K"}' type: local Change info
 {    
@@ -54,26 +54,45 @@ wardend comet show-validator
 
 wardend tx staking create-validator $HOME/validator.json \
 --from=wallet \
+--fees=250000000000000award \
 --chain-id=chiado_10010-1 \
---fees=500uward
+--node=https://rpc.chiado.wardenprotocol.org \
+--gas=auto \
+--gas-adjustment=1.6 \
+-y
 
 // Delegate you Validator (Change token 1ward = 1000000uward)
 
 wardend tx staking delegate $(wardend keys show wallet --bech val -a)  1000000uward \
-    --from=wallet \
-    --chain-id=chiado_10010-1 \
-    --fees=500uward
+--from=wallet \
+--fees=250000000000000award \
+--chain-id=chiado_10010-1 \
+--node=https://rpc.chiado.wardenprotocol.org \
+--gas=auto \
+--gas-adjustment=1.6 \
+-y
+
 // Withdraw rewards and commission from your validator
 
 wardend tx distribution withdraw-rewards $(wardend keys show wallet --bech val -a) \
---from wallet \
---commission \
+--from=wallet \
+--fees=250000000000000award \
 --chain-id=chiado_10010-1 \
---fees=500uward
+--node=https://rpc.chiado.wardenprotocol.org \
+--gas=auto \
+--gas-adjustment=1.6 \
+-y
 
 //Unjail
 
-wardend tx slashing unjail --from wallet --chain-id chiado_10010-1 --fees=500uward -y
+wardend tx slashing unjail \
+--from=wallet \
+--fees=250000000000000award \
+--chain-id=chiado_10010-1 \
+--node=https://rpc.chiado.wardenprotocol.org \
+--gas=auto \
+--gas-adjustment=1.6 \
+-y
 
 ```
 
@@ -102,5 +121,5 @@ sudo systemctl restart wardend
 sudo systemctl status wardend
 
 # Check Service Logs
-sudo journalctl -u wardend -f --no-hostname -o cat
+sudo journalctl -u wardend -f -o cat
 ```
