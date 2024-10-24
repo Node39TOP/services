@@ -14,15 +14,15 @@ rm -rf $HOME/.warden/data $HOME/.warden/wasm
 curl https://file.node39.top/testnet/warden/wasm-warden.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
 ```
 
-**Download snapshot:** Height 6915
+**Download snapshot: Daily**
 
 ```bash
 sudo systemctl stop wardend
 
 mv $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json.backup
 
-rm -rf $HOME/.warden/data $HOME/.warden/wasm
-curl https://file.node39.top/testnet/warden/snapshot-warden-6915.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
+SNAP_NAME=$(curl -s https://file.node39.top/testnet/warden/ | egrep -o 'snapshot-warden-[0-9]+\.tar\.lz4' | sort -V | tail -n 1)
+curl https://file.node39.top/testnet/warden/${SNAP_NAME} | lz4 -dc - | tar -xf - -C $HOME/.warden
 
 mv $HOME/.warden/priv_validator_state.json.backup $HOME/.warden/data/priv_validator_state.json
 
