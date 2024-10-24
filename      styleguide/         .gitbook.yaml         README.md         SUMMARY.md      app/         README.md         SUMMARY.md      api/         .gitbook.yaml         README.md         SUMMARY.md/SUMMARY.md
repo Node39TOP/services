@@ -78,6 +78,7 @@
   * [🚅 Sync](cosmos/warden-protocol/sync.md)
   * [🖥️ Upgrade](cosmos/warden-protocol/upgrade.md)
   * [🛟 Command](cosmos/warden-protocol/command.md)
+  * [Slinky](cosmos/warden-protocol/slinky.md)
 * [🟢 Galactica](cosmos/galactica.md)
 * [🟢 Airchains](cosmos/airchains/README.md)
   * [Sync](cosmos/airchains/sync.md)
