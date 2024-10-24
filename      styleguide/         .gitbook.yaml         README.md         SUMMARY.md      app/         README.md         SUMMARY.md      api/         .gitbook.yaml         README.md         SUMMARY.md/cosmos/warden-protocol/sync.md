@@ -14,7 +14,7 @@ rm -rf $HOME/.warden/data $HOME/.warden/wasm
 curl https://file.node39.top/testnet/warden/wasm-warden.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
 ```
 
-**Download snapshot: Daily**
+**Download snapshot: snapshort**: 03:30 UTC | **Daily** | **db**: goleveldb | **pruning**: 100/0/50 | **indexer**: null
 
 ```bash
 sudo systemctl stop wardend
