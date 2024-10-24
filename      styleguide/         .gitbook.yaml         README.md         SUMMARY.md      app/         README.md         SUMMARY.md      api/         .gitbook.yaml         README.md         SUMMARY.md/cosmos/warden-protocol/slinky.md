@@ -42,5 +42,5 @@ EOF
 ```
 systemctl daemon-reload
 systemctl enable slinky
-systemctl restart warden-slinky && journalctl -u slinky -f -o cat
+systemctl restart slinky && journalctl -u slinky -f -o cat
 ```
