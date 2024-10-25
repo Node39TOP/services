@@ -63,7 +63,7 @@ wardend tx staking create-validator $HOME/validator.json \
 
 // Delegate you Validator (Change token 1ward = 1000000uward)
 
-wardend tx staking delegate $(wardend keys show wallet --bech val -a)  1000000uward \
+wardend tx staking delegate $(wardend keys show wallet --bech val -a)  1000000award \
 --from=wallet \
 --fees=250000000000000award \
 --chain-id=chiado_10010-1 \
