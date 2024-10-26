@@ -27,7 +27,7 @@ rm -rf pactus-cli_${ver}_linux_arm64.tar.gz &#x26;&#x26; \
 mv pactus-cli_${ver} node_pactus &#x26;&#x26; cd node_pactus
 </code></pre>
 
-**Setup:**&#x20;
+**Create Wallet:**&#x20;
 
 ```
 ./pactus-daemon init
@@ -38,21 +38,12 @@ Save all important information in this step (<mark style="color:red;">Address va
 
 **If you already had a wallet before, you can use this command to restore the wallet**
 
+\
+**Restore wallet:**
+
 ```bash
 ./pactus-daemon init --restore "<your-seed>"
 ```
-
-{% hint style="danger" %}
-**Important: Set tx\_pool = 1000 -> 50**
-
-```bash
-sed -i.bak '/^\s*[tx_pool]/, /^\s*[/{s/(max_size = )100/\150/;}' $HOME/pactus/config.toml
-```
-
-**Command**
-
-<img src="../../.gitbook/assets/Ảnh màn hình 2024-05-26 lúc 10.26.31.png" alt="" data-size="original">
-{% endhint %}
 
 **Start Pactus: Run in tmux**
 
