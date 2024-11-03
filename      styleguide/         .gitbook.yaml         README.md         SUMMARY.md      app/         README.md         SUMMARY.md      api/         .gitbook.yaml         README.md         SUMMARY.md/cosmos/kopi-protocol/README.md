@@ -14,9 +14,9 @@ description: >-
 * Ubuntu - x86
 
 \
-Website: \
-Discord: \
-X: \
+Website: [https://kopi.money](https://kopi.money)\
+Discord: [https://discord.gg/GvnwSwsCcs](https://discord.gg/GvnwSwsCcs)\
+X: [https://twitter.com/kopi\_money/](https://twitter.com/kopi\_money/)\
 \
 Node39 support:
 
