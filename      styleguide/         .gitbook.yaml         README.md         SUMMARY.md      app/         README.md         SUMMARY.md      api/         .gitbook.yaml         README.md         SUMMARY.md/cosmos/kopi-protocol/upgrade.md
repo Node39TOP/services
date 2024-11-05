@@ -2,7 +2,7 @@
 
 Chain: kopi-test-5
 
-Version: 0.6.4
+Version: 0.6.4.1
 
 **Download Binary:**
 
