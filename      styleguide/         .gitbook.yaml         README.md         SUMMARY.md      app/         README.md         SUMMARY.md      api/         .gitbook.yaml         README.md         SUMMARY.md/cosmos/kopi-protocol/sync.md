@@ -4,7 +4,7 @@
 
 ```bash
 wget -O $HOME/.kopid/config/genesis.json https://file.node39.top/testnet/kopi/genesis.json
-wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/testnet//addrbook.json
+wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/testnet/kopi/addrbook.json
 ```
 
 **Download snapshot: snapshort**: 4 Hours | **Daily** | **db**: goleveldb | **pruning**: 100/0/50 | **indexer**: null

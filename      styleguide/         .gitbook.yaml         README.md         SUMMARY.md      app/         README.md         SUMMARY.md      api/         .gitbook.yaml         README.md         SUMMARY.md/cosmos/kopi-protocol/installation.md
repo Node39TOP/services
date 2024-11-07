@@ -96,7 +96,7 @@ s%:26660%:${KOPI_PORT}660%g" $HOME/.kopid/config/config.toml
 
 ```bash
 wget -O $HOME/.kopid/config/genesis.json https://file.node39.top/testnet/kopi/genesis.json
-wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/testnet//addrbook.json
+wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/testnet/kopi/addrbook.json
 ```
 
 **Peers:**
