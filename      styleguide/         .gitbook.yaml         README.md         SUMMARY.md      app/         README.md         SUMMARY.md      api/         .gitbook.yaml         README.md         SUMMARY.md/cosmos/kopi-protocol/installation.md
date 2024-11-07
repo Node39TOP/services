@@ -116,7 +116,7 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=$(which ) start
+ExecStart=$(which kopid) start
 Restart=always
 RestartSec=3
 LimitNOFILE=65535
