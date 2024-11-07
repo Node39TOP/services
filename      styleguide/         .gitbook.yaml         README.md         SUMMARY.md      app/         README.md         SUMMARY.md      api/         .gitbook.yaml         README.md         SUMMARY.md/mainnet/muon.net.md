@@ -1,7 +1,7 @@
 # 🟢 Muon.net
 
 **Hardware requirement: 4/8/40**\
-\
+**Port: 8012, 9012**\
 <mark style="color:red;">Note: Pion is currently not available for unstake. If you stake, you have to wait for the dev to update the feature.</mark>
 
 **Install dependencies**
