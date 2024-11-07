@@ -16,6 +16,7 @@ description: >-
 \
 Website: [https://kopi.money](https://kopi.money)\
 Discord: [https://discord.gg/GvnwSwsCcs](https://discord.gg/GvnwSwsCcs)\
+Telegram: [https://t.me/KopiProtocol](https://t.me/KopiProtocol)\
 X: [https://twitter.com/kopi\_money/](https://twitter.com/kopi\_money/)\
 \
 Node39 support:
