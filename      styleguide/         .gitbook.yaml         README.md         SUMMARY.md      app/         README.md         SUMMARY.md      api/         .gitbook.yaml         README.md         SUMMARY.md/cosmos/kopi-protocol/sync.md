@@ -7,9 +7,15 @@ wget -O $HOME/.kopid/config/genesis.json https://file.node39.top/testnet/kopi/ge
 wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/testnet/kopi/addrbook.json
 ```
 
-**Download snapshot: snapshort**: 4 Hours | **Daily** | **db**: goleveldb | **pruning**: 100/0/50 | **indexer**: null
+**Download snapshot: snapshort**: height 1108545| **Daily** | **db**: goleveldb | **pruning**: 100/0/50 | **indexer**: null
 
 ```bash
+sudo systemctl stop kopid
+cp $HOME/.kopid/data/priv_validator_state.json $HOME/.kopid/priv_validator_state.json.backup
+kopid tendermint unsafe-reset-all --home $HOME/.kopid --keep-addr-book
+curl https://file.node39.top/testnet/kopi/kopi-snapshot-1108545.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.kopid
+mv $HOME/.kopid/priv_validator_state.json.backup $HOME/.kopid/data/priv_validator_state.json
+sudo systemctl start kopid && sudo journalctl -u kopid -f --no-hostname -o cat
 ```
 
 **State sync:**
