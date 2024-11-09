@@ -111,7 +111,7 @@ sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persisten
 <pre class="language-bash"><code class="lang-bash">sudo tee /etc/systemd/system/kopid.service > /dev/null &#x3C;&#x3C;EOF
 
 [Unit]
-Description= Protocol
+Description=Kopi Protocol
 After=network-online.target
 
 [Service]
