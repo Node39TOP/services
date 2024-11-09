@@ -102,7 +102,7 @@ wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/testnet/kopi/a
 **Peers:**
 
 ```bash
-PEERS="cc8a61fd492fef27c99a4d5ff83b36b31ebfaf64@135.181.35.238:39656"
+PEERS="96b8b794306a195e22db77e2f6118cafd43a4c82@144.76.109.19:17656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.kopid/config/config.toml
 ```
 
