@@ -22,11 +22,6 @@
   * [🖥️ Upgrade](mainnet/nibiru-chain/upgrade.md)
   * [🛟 Command](mainnet/nibiru-chain/command.md)
   * [🔭 Database option](mainnet/nibiru-chain/database-option.md)
-* [🟢 Entangle](mainnet/entangle/README.md)
-  * [⚙️ Installation](mainnet/entangle/installation.md)
-  * [🚅 Sync](mainnet/entangle/sync.md)
-  * [🖥️ Upgrade](mainnet/entangle/upgrade.md)
-  * [🛟 Command](mainnet/entangle/command.md)
 * [🟢 Seda](mainnet/seda/README.md)
   * [⚙️ Installation](mainnet/seda/installation.md)
   * [🚅 Sync](mainnet/seda/sync.md)
@@ -47,6 +42,11 @@
   * [🚅 Sync](mainnet/shentu/sync.md)
   * [🖥️ Upgrade](mainnet/shentu/upgrade.md)
   * [🛟 Command](mainnet/shentu/command.md)
+* [🟢 Entangle](mainnet/entangle/README.md)
+  * [⚙️ Installation](mainnet/entangle/installation.md)
+  * [🚅 Sync](mainnet/entangle/sync.md)
+  * [🖥️ Upgrade](mainnet/entangle/upgrade.md)
+  * [🛟 Command](mainnet/entangle/command.md)
 
 ## 👨‍🏫 Testnet
 
