@@ -30,7 +30,7 @@ go version
 rm -rf $HOME/go
 sudo rm -rf /usr/local/go
 cd $HOME
-curl https://dl.google.com/go/go1.20.6.linux-arm64.tar.gz | sudo tar -C/usr/local -zxvf -
+curl https://dl.google.com/go/go1.23.1.linux-arm64.tar.gz | sudo tar -C/usr/local -zxvf -
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -48,7 +48,7 @@ cd $HOME
 rm -rf shentu
 git clone https://github.com/shentufoundation/shentu
 cd shentu
-git checkout v2.12.0
+git checkout v2.13.0
 make install
 shentud version
 ```
