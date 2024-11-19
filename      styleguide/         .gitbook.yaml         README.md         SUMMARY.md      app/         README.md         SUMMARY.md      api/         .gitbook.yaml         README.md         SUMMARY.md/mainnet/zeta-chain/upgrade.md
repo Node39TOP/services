@@ -2,7 +2,7 @@
 
 **Chain:** zetachain\_7000-1
 
-**Version: 19.1.1**
+**Version: 22.0.2**
 
 **Download binary Zetachain:**
 
@@ -10,6 +10,6 @@
 rm -rf node
 <strong>git clone https://github.com/zeta-chain/node.git
 </strong>cd node
-git checkout v19.1.1
+git checkout v22.0.2
 make install
 </code></pre>
