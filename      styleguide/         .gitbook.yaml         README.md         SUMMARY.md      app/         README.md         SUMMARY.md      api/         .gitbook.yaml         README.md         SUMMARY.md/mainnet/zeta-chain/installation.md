@@ -46,11 +46,9 @@ go version
 
 ```bash
 cd $HOME
-rm -rf node
-git clone https://github.com/zeta-chain/node.git
-cd node
-git checkout v20.0.2
-make install
+wget -O $HOME/zetacored https://github.com/zeta-chain/node/releases/download/v20.0.2/zetacored-linux-amd64
+chmod +x $HOME/zetacored 
+mv $HOME/zetacored /usr/local/bin
 ```
 
 **Set chain and Name Zeta Chain:**\
