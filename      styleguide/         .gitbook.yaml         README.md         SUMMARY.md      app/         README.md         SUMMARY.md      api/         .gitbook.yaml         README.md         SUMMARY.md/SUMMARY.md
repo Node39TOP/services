@@ -47,6 +47,11 @@
   * [🚅 Sync](mainnet/entangle/sync.md)
   * [🖥️ Upgrade](mainnet/entangle/upgrade.md)
   * [🛟 Command](mainnet/entangle/command.md)
+* [🟢 Kopi Protocol](mainnet/kopi-protocol/README.md)
+  * [⚙️ Installation](mainnet/kopi-protocol/installation.md)
+  * [🚅 Sync](mainnet/kopi-protocol/sync.md)
+  * [🖥️ Upgrade](mainnet/kopi-protocol/upgrade.md)
+  * [🛟 Command](mainnet/kopi-protocol/command.md)
 
 ## 👨‍🏫 Testnet
 
@@ -72,11 +77,6 @@
   * [🖥️ Upgrade](cosmos/warden-protocol/upgrade.md)
   * [🛟 Command](cosmos/warden-protocol/command.md)
   * [Slinky](cosmos/warden-protocol/slinky.md)
-* [🟢 Kopi Protocol](cosmos/kopi-protocol/README.md)
-  * [⚙️ Installation](cosmos/kopi-protocol/installation.md)
-  * [🚅 Sync](cosmos/kopi-protocol/sync.md)
-  * [🖥️ Upgrade](cosmos/kopi-protocol/upgrade.md)
-  * [🛟 Command](cosmos/kopi-protocol/command.md)
 * [🟢 Galactica](cosmos/galactica.md)
 * [🟢 Airchains](cosmos/airchains/README.md)
   * [Sync](cosmos/airchains/sync.md)

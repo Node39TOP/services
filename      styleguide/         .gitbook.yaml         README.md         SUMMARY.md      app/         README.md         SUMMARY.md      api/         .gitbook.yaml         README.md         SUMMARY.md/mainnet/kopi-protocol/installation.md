@@ -28,25 +28,25 @@ go version
 
 ```bash
 cd $HOME
-wget -O kopid https://github.com/kopi-money/kopi/releases/download/v0.6.4.1/kopid-v0.6.4.1-linux-amd64
-chmod +x kopid
-mv kopid /usr/local/bin
-kopid version
+git clone --quiet --depth 1 --branch v0.6.5 https://github.com/kopi-money/kopi.git
+cd kopi
+make install
+kopid version --long | grep -e commit -e version
 ```
 
 **Set chain:**\
 _<mark style="color:red;">Change</mark>_ _<mark style="color:red;">\<Change-Name></mark>_&#x20;
 
 ```bash
-kopid init <Change-Name> --chain-id kopi-test-5
-kopid config set client chain-id kopi-test-5
-kopid config set client keyring-backend test
+kopid init <Change-Name> --chain-id luwak-1
+kopid config.config set client chain-id luwak-1
+kopid config set client keyring-backend os
 ```
 
 **Set min gas:**&#x20;
 
 ```bash
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ukopi\"|" $HOME/.kopid/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.05ukopi\"|" $HOME/.kopid/config/app.toml
 ```
 
 **Set indexing:**&#x20;
@@ -95,14 +95,14 @@ s%:26660%:${KOPI_PORT}660%g" $HOME/.kopid/config/config.toml
 **Download Genesis & addressbook:**
 
 ```bash
-wget -O $HOME/.kopid/config/genesis.json https://file.node39.top/testnet/kopi/genesis.json
-wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/testnet/kopi/addrbook.json
+wget -O $HOME/.kopid/config/genesis.json https://file.node39.top/Mainnet/Kopi/genesis.json
+wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/Mainnet/Kopi/addrbook.json
 ```
 
 **Peers:**
 
 ```bash
-PEERS="96b8b794306a195e22db77e2f6118cafd43a4c82@144.76.109.19:17656"
+PEERS="9aff60b8a0580e17e6e01bcfc55e7b827966ba0d@144.76.109.19:17656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.kopid/config/config.toml
 ```
 

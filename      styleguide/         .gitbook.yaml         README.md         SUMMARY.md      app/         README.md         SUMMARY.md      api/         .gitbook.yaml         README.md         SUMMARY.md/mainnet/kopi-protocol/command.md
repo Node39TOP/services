@@ -63,7 +63,8 @@ kopid tendermint show-validator
 
 kopid tx staking create-validator $HOME/.kopid/config/validator.json \
 --from=wallet \
---chain-id=kopi-test-5 \
+--chain-id=luwak-1 \
+--fees 100ukopi \
 --node=https://kopi-testnet-rpc.node39.top:443 \
 -y
 
@@ -71,24 +72,27 @@ kopid tx staking create-validator $HOME/.kopid/config/validator.json \
 
 kopid tx staking delegate $(kopid keys show wallet --bech val -a)  1000000ukopi \
 --from=wallet \
---chain-id=kopi-test-5 \
---node=https://kopi-testnet-rpc.node39.top:443 \
+--chain-id=luwak-1 \
+--fees 100ukopi \
+--node=https://kopi-rpc.node39.top:443 \
 -y
 
 // Withdraw rewards and commission from your validator
 
 kopid tx distribution withdraw-rewards $(kopid keys show wallet --bech val -a) \
 --from=wallet \
---chain-id=kopi-test-5 \
---node=https://kopi-testnet-rpc.node39.top:443 \
+--chain-id=luwak-1 \
+--fees 100ukopi \
+--node=https://kopi-rpc.node39.top:443 \
 -y
 
 //Unjail
 
 kopid tx slashing unjail \
 --from=wallet \
---chain-id=kopi-test-5 \
---node=https://kopi-testnet-rpc.node39.top:443 \
+--chain-id=luwak-1 \
+--fees 100ukopi \
+--node=https://kopi-rpc.node39.top:443 \
 -y
 
 ```
