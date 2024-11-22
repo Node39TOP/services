@@ -46,7 +46,7 @@ kopid config set client keyring-backend os
 **Set min gas:**&#x20;
 
 ```bash
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.05ukopi\"|" $HOME/.kopid/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001ukopi\"|" $HOME/.kopid/config/app.toml
 ```
 
 **Set indexing:**&#x20;
