@@ -35,11 +35,11 @@ kopid version --long | grep -e commit -e version
 ```
 
 **Set chain:**\
-_<mark style="color:red;">Change</mark>_ _<mark style="color:red;">\<Change-Name></mark>_&#x20;
+&#xNAN;_<mark style="color:red;">Change</mark>_ _<mark style="color:red;">\<Change-Name></mark>_&#x20;
 
 ```bash
 kopid init <Change-Name> --chain-id luwak-1
-kopid config.config set client chain-id luwak-1
+kopid config set client chain-id luwak-1
 kopid config set client keyring-backend os
 ```
 
