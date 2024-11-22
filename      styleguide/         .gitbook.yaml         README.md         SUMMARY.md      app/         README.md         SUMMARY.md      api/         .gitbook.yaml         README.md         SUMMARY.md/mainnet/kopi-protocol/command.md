@@ -65,7 +65,7 @@ kopid tx staking create-validator $HOME/.kopid/config/validator.json \
 --from=wallet \
 --chain-id=luwak-1 \
 --fees 100ukopi \
---node=https://kopi-testnet-rpc.node39.top:443 \
+--node=https://kopi-rpc.node39.top:443 \
 -y
 
 // Delegate you Validator (Change token 1XKP = 1000000ukopi)

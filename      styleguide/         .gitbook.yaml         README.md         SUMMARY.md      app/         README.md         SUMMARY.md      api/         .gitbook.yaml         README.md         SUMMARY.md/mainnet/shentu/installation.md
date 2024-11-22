@@ -13,7 +13,7 @@ sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -
 rm -rf $HOME/go
 sudo rm -rf /usr/local/go
 cd $HOME
-curl https://dl.google.com/go/go1.20.6.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
+curl https://dl.google.com/go/go1.23.3.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
