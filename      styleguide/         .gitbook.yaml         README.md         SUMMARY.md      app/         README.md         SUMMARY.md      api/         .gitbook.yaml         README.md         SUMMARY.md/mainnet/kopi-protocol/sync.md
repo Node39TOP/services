@@ -3,8 +3,8 @@
 **Download Genesis & addressbook:**
 
 ```bash
-wget -O $HOME/.kopid/config/genesis.json https://file.node39.top/Mainnet/Kopi/genesis.json
-wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/Mainnet/Kopi/addrbook.json
+curl -O $HOME/.kopid/config/genesis.json https://file.node39.top/Mainnet/Kopi/genesis.json
+curl -O $HOME/.kopid/config/addrbook.json https://file.node39.top/Mainnet/Kopi/addrbook.json
 ```
 
 **Download snapshot: snapshort**: Auto snapshot 6h00 UTC and 18h00 UTC | **Daily** | **db**: goleveldb | **pruning**: 100/0/50 | **indexer**: null
