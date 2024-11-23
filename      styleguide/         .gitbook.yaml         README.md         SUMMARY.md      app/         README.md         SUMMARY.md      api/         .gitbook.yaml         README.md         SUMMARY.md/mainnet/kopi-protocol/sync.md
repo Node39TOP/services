@@ -7,7 +7,7 @@ wget -O $HOME/.kopid/config/genesis.json https://file.node39.top/Mainnet/Kopi/ge
 wget -O $HOME/.kopid/config/addrbook.json https://file.node39.top/Mainnet/Kopi/addrbook.json
 ```
 
-**Download snapshot: snapshort**: Auto snapshot 0h00 UTC and 12h00 UTC | **Daily** | **db**: goleveldb | **pruning**: 100/0/50 | **indexer**: null
+**Download snapshot: snapshort**: Auto snapshot 6h00 UTC and 18h00 UTC | **Daily** | **db**: goleveldb | **pruning**: 100/0/50 | **indexer**: null
 
 ```bash
 sudo systemctl stop kopid 
