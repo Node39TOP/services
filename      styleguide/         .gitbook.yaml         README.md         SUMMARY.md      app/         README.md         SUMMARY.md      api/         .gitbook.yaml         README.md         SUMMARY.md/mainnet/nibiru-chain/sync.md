@@ -3,17 +3,18 @@
 **Download Snapshot:** Height 10182074 goleveldb | 4.6Gb
 
 ```bash
-sudo systemctl stop nibid
+sudo systemctl stop nibid 
 
-cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup 
+cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup
 
-nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book 
-curl https://file.node39.top/Mainnet/Nibiru/snapshot-nibid-10182074.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
+nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
+SNAP_NAME=$(curl -s https://file2.node39.top/Mainnet/Nibiru/ | egrep -o 'snapshot-shentu-[0-9]+\.tar\.lz4' | sort -V | tail -n 1)
+wget -c https://file.node39.top/Mainnet/Shentu/${SNAP_NAME} -O - | lz4 -dc - | tar -xf - -C $HOME/.shentud
 
-cp $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json 
+mv $HOME/.shentud/priv_validator_state.json.backup $HOME/.shentud/data/priv_validator_state.json
 
-sudo systemctl restart nibid
-sudo journalctl -u nibid -f --no-hostname -o cat
+sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o cat
+
 ```
 
 **State sync:**
