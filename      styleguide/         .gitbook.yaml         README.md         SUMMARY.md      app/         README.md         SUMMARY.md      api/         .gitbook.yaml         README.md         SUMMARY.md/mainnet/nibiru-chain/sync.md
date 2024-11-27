@@ -1,6 +1,6 @@
 # 🚅 Sync
 
-**Download Snapshot:** Height 10182074 goleveldb | 4.6Gb
+**Download Snapshot: Daily** | **db:** goleveldb | **pruning**: 100/0/50 | **indexer**: null
 
 ```bash
 sudo systemctl stop nibid 
@@ -8,7 +8,7 @@ sudo systemctl stop nibid
 cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup
 
 nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
-SNAP_NAME=$(curl -s https://file2.node39.top/Mainnet/Nibiru/ | egrep -o 'snapshot-shentu-[0-9]+\.tar\.lz4' | sort -V | tail -n 1)
+SNAP_NAME=$(curl -s https://file3.node39.top/Mainnet/Nibiru/ | egrep -o 'snapshot-shentu-[0-9]+\.tar\.lz4' | sort -V | tail -n 1)
 wget -c https://file.node39.top/Mainnet/Shentu/${SNAP_NAME} -O - | lz4 -dc - | tar -xf - -C $HOME/.shentud
 
 mv $HOME/.shentud/priv_validator_state.json.backup $HOME/.shentud/data/priv_validator_state.json
