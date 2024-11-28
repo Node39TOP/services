@@ -23,14 +23,14 @@ Node39 support:
 #### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
 
 {% hint style="info" %}
-Upgraded Version 0.2.4
+Upgraded Version 0.2.7
 
 <pre class="language-bash"><code class="lang-bash"><strong>cd $HOME
 </strong>rm -rf bin
 mkdir bin
 cd $HOME/bin
-wget https://github.com/Galactica-corp/galactica/releases/download/v0.2.4/galacticad_v0.2.4-linux_amd64.zip
-unzip galacticad_v0.2.4-linux_amd64.zip
+wget https://github.com/Galactica-corp/galactica/releases/download/v0.2.7/galacticad_v0.2.7-linux_amd64.zip
+unzip galacticad_v0.2.7-linux_amd64.zip
 chmod +x $HOME/bin/galacticad
 sudo mv $HOME/bin/galacticad $(which galacticad)
 sudo systemctl restart galacticad &#x26;&#x26; sudo journalctl -u galacticad -f
@@ -95,7 +95,7 @@ git clone https://github.com/Galactica-corp/galactica
 
 cd galactica
 
-git checkout v0.1.2
+git checkout v0.2.7
 
 make install
 
@@ -103,7 +103,7 @@ galacticad version
 ```
 
 **Set chain and Name Galactica:**\
-_<mark style="color:red;">Change</mark>_ _<mark style="color:red;">\<Change-Name></mark>_&#x20;
+&#xNAN;_<mark style="color:red;">Change</mark>_ _<mark style="color:red;">\<Change-Name></mark>_&#x20;
 
 ```
 galacticad init <Change-Name> --chain-id=galactica_9302-1
@@ -196,7 +196,7 @@ galacticad keys convert-bech32-to-hex $(galacticad keys show wallet -a)
 galacticad q bank balances $(galacticad keys show wallet -a)
 ```
 
-**Check sync: **<mark style="color:red;">**(False -> done)**</mark>
+**Check sync:&#x20;**<mark style="color:red;">**(False -> done)**</mark>
 
 ```
 galacticad status 2>&1 | jq .SyncInfo.catching_up
