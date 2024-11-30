@@ -6,10 +6,10 @@
 sudo apt update && sudo apt upgrade -y && sudo apt install tmux git curl -y && sudo apt install make clang pkg-config libssl-dev build-essential -y 
 ```
 
-**Download Pactus v1.6.2: (amd64)**
+**Download Pactus v1.6.3: (amd64)**
 
 ```bash
-ver="1.6.2" && \
+ver="1.6.3" && \
 cd $HOME && rm -rf node_pactus && \
 wget https://github.com/pactus-project/pactus/releases/download/v${ver}/pactus-cli_${ver}_linux_amd64.tar.gz && \
 tar -xzf pactus-cli_${ver}_linux_amd64.tar.gz && \
@@ -17,9 +17,9 @@ rm -rf pactus-cli_${ver}_linux_amd64.tar.gz && \
 mv pactus-cli_${ver} node_pactus && cd node_pactus
 ```
 
-**Download Pactus v1.6.2: (arm64)**
+**Download Pactus v1.6.3: (arm64)**
 
-<pre class="language-bash"><code class="lang-bash">ver="1.6.2" &#x26;&#x26; \
+<pre class="language-bash"><code class="lang-bash">ver="1.6.3" &#x26;&#x26; \
 <strong>cd $HOME &#x26;&#x26; rm -rf node_pactus &#x26;&#x26; \
 </strong>wget https://github.com/pactus-project/pactus/releases/download/v${ver}/pactus-cli_${ver}_linux_arm64.tar.gz &#x26;&#x26; \
 tar -xzf pactus-cli_${ver}_linux_arm64.tar.gz &#x26;&#x26; \
