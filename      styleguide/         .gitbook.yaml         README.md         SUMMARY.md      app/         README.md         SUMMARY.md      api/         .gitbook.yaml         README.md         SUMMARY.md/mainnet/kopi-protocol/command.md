@@ -80,7 +80,7 @@ kopid tx staking delegate $(kopid keys show wallet --bech val -a)  1000000ukopi 
 // Withdraw rewards and commission from your validator
 
 kopid tx distribution withdraw-rewards $(kopid keys show wallet --bech val -a) \
---commission
+--commission \
 --from=wallet \
 --chain-id=luwak-1 \
 --fees 100ukopi \
