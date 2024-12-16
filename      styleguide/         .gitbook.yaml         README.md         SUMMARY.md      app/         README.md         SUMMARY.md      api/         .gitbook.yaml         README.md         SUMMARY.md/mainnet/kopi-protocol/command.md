@@ -22,7 +22,8 @@ kopid keys list
 kopid keys delete wallet
 
 // Check Balance
-kopid q bank balances $(kopid keys show wallet -a)
+kopid q bank balances $(kopid keys show wallet -a) \
+--node=https://kopi-rpc.node39.top:443
 
 // Show validator
 kopid tendermint show-validator
