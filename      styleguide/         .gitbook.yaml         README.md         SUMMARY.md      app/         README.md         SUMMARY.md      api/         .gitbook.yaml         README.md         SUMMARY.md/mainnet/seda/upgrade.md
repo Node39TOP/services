@@ -10,6 +10,9 @@
 </strong>chmod +x sedad
 sudo mv sedad /usr/local/bin
 sedad version
+
+sudo systemctl restart sedad
+sudo journalctl -u sedad -fo cat
 </code></pre>
 
 **Download binary Seda: (arm-64)**
@@ -18,4 +21,7 @@ sedad version
 <strong>chmod +x sedad
 </strong>sudo mv sedad /usr/local/bin
 sedad version
+
+sudo systemctl restart sedad
+sudo journalctl -u sedad -fo cat
 </code></pre>
