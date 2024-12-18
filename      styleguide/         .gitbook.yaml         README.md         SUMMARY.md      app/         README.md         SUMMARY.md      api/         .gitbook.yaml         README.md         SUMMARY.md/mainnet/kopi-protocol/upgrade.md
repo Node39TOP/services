@@ -16,6 +16,6 @@ kopid version --long | grep -e commit -e version
 cd $HOME
 wget -O kopid https://github.com/kopi-money/kopi/releases/download/v0.6.5.2/kopid-v0.6.5.2-linux-amd64-static
 chmod +x $HOME/kopid
-mv $HOME/kopid $HOME/go/bin/
+mv kopid /usr/local/bin
 sudo systemctl restart kopid && sudo journalctl -u kopid -fo cat
 ```
