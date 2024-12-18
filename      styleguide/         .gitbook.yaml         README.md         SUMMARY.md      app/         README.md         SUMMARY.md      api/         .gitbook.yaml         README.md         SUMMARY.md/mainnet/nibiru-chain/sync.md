@@ -9,11 +9,11 @@ cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state
 
 nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
 SNAP_NAME=$(curl -s https://file3.node39.top/Mainnet/Nibiru/ | egrep -o 'snapshot-shentu-[0-9]+\.tar\.lz4' | sort -V | tail -n 1)
-wget -c https://file.node39.top/Mainnet/Shentu/${SNAP_NAME} -O - | lz4 -dc - | tar -xf - -C $HOME/.shentud
+wget -c https://file.node39.top/Mainnet/Nibiru/${SNAP_NAME} -O - | lz4 -dc - | tar -xf - -C $HOME/.
 
-mv $HOME/.shentud/priv_validator_state.json.backup $HOME/.shentud/data/priv_validator_state.json
+mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json
 
-sudo systemctl restart shentud && sudo journalctl -u shentud -f --no-hostname -o cat
+sudo systemctl restart nibid && sudo journalctl -u nibid -f --no-hostname -o cat
 
 ```
 
