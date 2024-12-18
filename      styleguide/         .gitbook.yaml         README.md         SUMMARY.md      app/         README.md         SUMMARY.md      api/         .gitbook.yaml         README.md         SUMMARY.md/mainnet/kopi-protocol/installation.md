@@ -29,7 +29,7 @@ go version
 ```bash
 cd $HOME
 rm -rf kopi
-git clone --quiet --depth 1 --branch v0.6.5.1 https://github.com/kopi-money/kopi.git
+git clone --quiet --depth 1 --branch v0.6.5.2 https://github.com/kopi-money/kopi.git
 cd kopi
 make install
 kopid version --long | grep -e commit -e version
