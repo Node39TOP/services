@@ -17,15 +17,15 @@ description: >-
 Website: [https://kopi.money](https://kopi.money)\
 Discord: [https://discord.gg/GvnwSwsCcs](https://discord.gg/GvnwSwsCcs)\
 Telegram: [https://t.me/KopiProtocol](https://t.me/KopiProtocol)\
-X: [https://twitter.com/kopi\_money/](https://twitter.com/kopi\_money/)\
+X: [https://twitter.com/kopi\_money/](https://twitter.com/kopi_money/)\
 \
 Node39 support:
 
-* [x] RPC: [https://kopi-testnet-rpc.node39.top](https://kopi-testnet-rpc.node39.top)
-* [x] API: [https://kopi-testnet-api.node39.top](https://kopi-testnet-api.node39.top)
-* [x] gRPC: [https://kopi-testnet-grpc.node39.top](https://kopi-testnet-grpc.node39.top)
-* [x] Snapshort: 4 Hours
+* [x] RPC: [https://kopi-rpc.node39.top](https://kopi-rpc.node39.top)
+* [x] API: [https://kopi-api.node39.top](https://kopi-api.node39.top)
+* [x] gRPC: [https://kopi-grpc.node39.top](https://kopi-grpc.node39.top)
+* [x] Snapshort: Daily
 * [x] State sync:
-* [x] Explorer: [https://explorer.node39.top/kopi-testnet/staking](https://explorer.node39.top/kopi-testnet/staking)
+* [x] Explorer: [https://explorer.node39.top/kopi/staking/kopivaloper1erq6q2s80mmavhj37qwtsksy4tfyt897u3644x](https://explorer.node39.top/kopi/staking/kopivaloper1erq6q2s80mmavhj37qwtsksy4tfyt897u3644x)
 
 #### &#x20;<a href="#install-dependencies" id="install-dependencies"></a>
