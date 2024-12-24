@@ -2,7 +2,7 @@
 
 **Chain:** zetachain\_7000-1
 
-**Version: 23.0.0**
+**Version: 24.0.0**
 
 **Download binary Zetachain:**
 
