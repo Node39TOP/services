@@ -1,4 +1,4 @@
-# 🟢 Muon.net
+# <img src="https://node39.top/logo/Muon.jpg" alt="Muon.net" width="50" /> Muon.net
 
 **Hardware requirement: 4/8/40**\
 **Port: 8012, 9012**\
